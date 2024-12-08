@@ -16,7 +16,7 @@ import { FaPinterest } from "react-icons/fa";
 
 function Footer() {
   return (
-    <div>footer</div>
+    <div></div>
   )
 }
 
