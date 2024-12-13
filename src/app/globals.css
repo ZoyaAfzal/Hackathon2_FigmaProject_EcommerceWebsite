@@ -4,7 +4,18 @@
 
 body {
   font-family: Arial, Helvetica, sans-serif;
-  ;
+  
+}
+.slider-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+@media (max-width: 640px) {
+  .slider-image {
+    height: 600px;  /* Increase height for smaller screens */
+  }
 }
 
 @layer utilities {

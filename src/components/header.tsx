@@ -6,7 +6,7 @@ import BottomNav from './bottomNav';
 
 function Header() {
   return (
-   <header className="sticky top-0 w-full bottor-b-[px]">
+   <header className=" top-0 w-full bottor-b-[px]">
     <div>
         { /* topNavbar */ }
        <TopNavbar />

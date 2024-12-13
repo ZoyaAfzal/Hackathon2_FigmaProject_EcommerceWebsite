@@ -23,29 +23,29 @@ function MobileNavbar() {
       {/* Hamburger Menu */}
       <Sheet>
         <SheetTrigger>
-          <GiHamburgerMenu className="text-3xl" />
+          <GiHamburgerMenu className="text-3xl hover:text-colors-secondaryColor" />
         </SheetTrigger>
         <SheetContent side="right">
           <SheetHeader>
             <SheetTitle>Menu</SheetTitle>
             <SheetDescription>
-              <ul className="flex flex-col gap-4 text-[#111111]">
-                <li>
+              <ul className="flex flex-col gap-4 text-[#111111] justify-start items-start">
+                <li className="hover:text-colors-secondaryColor">
                   <Link href="/news">News & Featured</Link>
                 </li>
-                <li>
+                <li className="hover:text-colors-secondaryColor">
                   <Link href="/men">Men</Link>
                 </li>
-                <li>
+                <li className="hover:text-colors-secondaryColor">
                   <Link href="/women">Women</Link>
                 </li>
-                <li>
+                <li className="hover:text-colors-secondaryColor">
                   <Link href="/kids">Kids</Link>
                 </li>
-                <li>
+                <li className="hover:text-colors-secondaryColor">
                   <Link href="/sale">Sale</Link>
                 </li>
-                <li>
+                <li className="hover:text-colors-secondaryColor">
                   <Link href="/snrks">SNRKS</Link>
                 </li>
               </ul>

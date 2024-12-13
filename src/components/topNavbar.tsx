@@ -9,25 +9,25 @@ function TopNavbar() {
     <Image src={nikelogo} alt="nikelogo" width={24} height={24}/>
     <div className='flex gap-2'>
         <ul className='flex text-[14px] text-black font-semibold cursor-pointer font-sans pr-10'>
-            <li>
+            <li className='hover:text-colors-secondaryColor'>
             <Link href="/">
             Find a Store 
             </Link>
             <span className='pl-2'>|</span>
             </li>
-            <li className='pl-2'>
+            <li className='pl-2 hover:text-colors-secondaryColor'>
             <Link href="/">
             Help 
             </Link>
-            <span className='pl-2'>|</span>
+            <span className='pl-2 hover:text-colors-secondaryColor'>|</span>
             </li>
-            <li className='pl-2'>
+            <li className='pl-2 hover:text-colors-secondaryColor'>
             <Link href="/">
             Join Us 
             </Link>
             <span className='pl-2'>|</span>
             </li>
-            <li className='pl-2'>
+            <li className='pl-2 hover:text-colors-secondaryColor'>
             <Link href="/">
             Sign In  
             </Link>

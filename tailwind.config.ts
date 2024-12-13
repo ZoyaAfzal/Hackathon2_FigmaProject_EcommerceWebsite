@@ -20,8 +20,8 @@ const config: Config = {
   				foreground: 'hsl(var(--card-foreground))'
   			},
 			  colors: {
-				primaryColor: "#111111",
-				secondaryColor:" #577c8c"  ,
+				primaryColor: "#1d778d",
+				secondaryColor:" #118693 "  ,
 				bgColor: "#F5F5F5",
 			  },
   			popover: {
