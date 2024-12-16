@@ -24,9 +24,9 @@ function Products() {
             <FaChevronLeft className="ml-[140px] absolute  text-gray-600 w-8 h-8 bg-gray-100 hover:bg-gray-300 rounded-full p-2 cursor-pointer lg:mt-[370px] lg:ml-[430px] md:mt-[260px] md:ml-[140px] mt-[252px]" />
           </div>
           {/* Women's Section */}
-          <div className="flex items-center mt-36 md:mr-12">
-            <p className="flex font-semibold absolute md:mt-5 md:ml-9 mr-12 lg:mr-0 lg:ml-[40px] hover:text-colors-secondaryColor lg:mt-8">Shop Women&apos;s</p>
-            <FaAngleRight className="lg:ml-42 ml-[126px] text-gray-600 w-8 h-8 bg-gray-100 hover:bg-gray-300 rounded-full p-2 cursor-pointer md:mt-4 md:ml-[162px] lg:mt-7"/>
+          <div className="flex items-center mt-36 md:mr-12 ">
+            <p className="flex font-semibold absolute md:mt-5 md:ml-9 mr-12 lg:mr-0 lg:ml-[60px] hover:text-colors-secondaryColor lg:mt-8">Shop Women&apos;s</p>
+            <FaAngleRight className="lg:ml-[180px] ml-[126px] text-gray-600 w-8 h-8 bg-gray-100 hover:bg-gray-300 rounded-full p-2 cursor-pointer md:mt-4 md:ml-[162px] lg:mt-7"/>
             <FaChevronLeft className="lg:ml-2 ml-2 text-gray-600 w-8 h-8 bg-gray-100 hover:bg-gray-300 rounded-full p-2 cursor-pointer md:mt-4 lg:mt-7" />
           </div>
         </div>

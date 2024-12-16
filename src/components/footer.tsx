@@ -11,7 +11,7 @@ import { IoLocation } from "react-icons/io5";
 
 function Footer() {
   return (
-    <div className='max-w-full w-full h-auto flex justify-center items-center lg:mt-[26%] md:mt-[26%] mt-[160%] bg-black text-white'>
+    <div className='max-w-full w-full h-auto flex justify-center items-center lg:mt-[18%] md:mt-[26%] mt-[160%] bg-black text-white'>
       <div className="max-w-[1180px] w-full h-auto grid  grid-cols-1 md:grid-cols-2 mt-16 mr-6 gap-8 ">
         <div className="max-w-[832px] w-full h-[23] grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 lg:gap-44 md:gap-4 gap-y-20 mx-4">
           <div className="w-[225px] h-[169px] flex flex-col bg-black">

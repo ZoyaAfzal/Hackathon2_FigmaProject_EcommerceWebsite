@@ -12,7 +12,7 @@ function MainNav() {
       <Image src={nike} alt="nikelogo2" width={59} height={20}/>
       { /* categories */ }
       <ul className='flex gap-8 lg:mr-[36%] font-semibold text-[#111111] md:gap-4 md:mr-[28%]'>
-        <li className='hover:text-colors-secondaryColor hover:underline duration-200'><Link href="/news&featured">News & Featured</Link></li>
+        <li className='hover:text-colors-secondaryColor hover:underline duration-200'><Link href="/featuredProducts">News & Featured</Link></li>
         <li className='hover:text-colors-secondaryColor hover:underline duration-200'><Link href="/">Men</Link></li>
         <li className='hover:text-colors-secondaryColor hover:underline duration-200'><Link href="/">Women</Link></li>
         <li className='hover:text-colors-secondaryColor hover:underline duration-200'><Link href="/">Kids</Link></li>

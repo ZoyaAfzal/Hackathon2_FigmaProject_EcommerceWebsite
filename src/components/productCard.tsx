@@ -1,20 +1,22 @@
+import Image from "next/image";
 import React from "react";
 
 type Product = {
-  id: number;
+  id: string;
   tag: string;
   title: string;
   category: string;
   color: string;
   price: string;
   image: string;
+  style: string;
 };
 
 const ProductCard = ({ product }: { product: Product }) => {
   return (
     <div className="border shadow-sm hover:shadow-lg transition-all ">
       {/* Product Image */}
-      <img
+      <Image
         src={product.image}
         alt={product.title}
         className="w-[348px] h-[348px] object-cover rounded-t-sm hover:border-[1px] hover:border-gray-600"
