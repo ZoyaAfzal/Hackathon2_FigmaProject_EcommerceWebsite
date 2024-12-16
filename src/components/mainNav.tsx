@@ -26,7 +26,9 @@ function MainNav() {
             </div>
             <div className="flex gap-6 pl-2">
             <FaRegHeart className='text-[20px] text-[#464444] hover:text-colors-secondaryColor'/>
-            <IoBagOutline className='text-[20px] text-[#111111] hover:text-colors-secondaryColor'/>
+           <Link href="/addtocart">
+           <IoBagOutline className='text-[20px] text-[#111111] hover:text-colors-secondaryColor'/>    
+           </Link> 
             </div>
 
               
