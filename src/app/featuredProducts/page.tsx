@@ -1,13 +1,11 @@
 'use client';
-import MainNav from '@/components/mainNav';
 import { IoMdSwitch } from "react-icons/io";
-import TopNavbar from '@/components/topNavbar';
 import { RiArrowDropDownLine, RiArrowDropUpLine } from "react-icons/ri";
 import { products } from '../data/productsData';
 import ProductCard from '@/components/productCard';
 import Link from 'next/link';
 import React, { useState } from 'react';
-import Footer from '@/components/footer';
+import MobileNavbar from '@/components/mobileNavbar';
 
 const sidebarList = [
   "Shoes", "Sports Bras", "Tops & T-Shirts", "Hoodies & Sweatshirts", "Jackets",
@@ -19,6 +17,7 @@ function NewsandFeatured() {
   const [selectedGender, setSelectedGender] = useState<string[]>([]);
   const [selectedKids, setSelectedKids] = useState<string[]>([]);
   const [selectedPrice, setSelectedPrice] = useState<string[]>([]);
+
 
   const handleCheckboxChange = (
     e: React.ChangeEvent<HTMLInputElement>,
@@ -32,12 +31,12 @@ function NewsandFeatured() {
 
   return (
     <div className="max-w-[1440px] w-full mx-auto">
-      {/* Top Navigation */}
-      <TopNavbar />
-      <MainNav />
+    <div className="md:hidden">
+      <MobileNavbar />
+    </div>
 
       {/* Header */}
-      <div className="w-full flex flex-col lg:flex-row justify-between items-center px-6 lg:pr-12 mt-16 lg:mt-32">
+      <div className="w-full flex flex-col lg:flex-row justify-between items-center px-6 lg:pr-12 mt-16 lg:mt-8">
         <h1 className="text-2xl font-bold">New (500)</h1>
         <ul className="flex gap-6 mt-4 lg:mt-0 text-[16px] font-medium">
           <li className="flex items-center">Hide Filters <IoMdSwitch className="ml-2 text-xl" /></li>
@@ -125,6 +124,7 @@ function NewsandFeatured() {
           </div>
         </div>
 
+
         {/* Products Section */}
         <div className="w-full lg:w-[80%] grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 px-4 lg:px-6 md:mt-12 mt-8 lg:mt-0">
           {products.map((product) => (
@@ -160,11 +160,6 @@ function NewsandFeatured() {
         </div>
       </section>
           </div>
-
-      {/* Footer */}
-      <div className="md:mt-[10%] top-0">
-      <Footer />
-      </div>
     </div>
   );
 }

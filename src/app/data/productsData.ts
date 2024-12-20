@@ -172,7 +172,7 @@ export const products = [
       {
       id: "14",
       title: "Nike Air Force 1 '07",
-      category: "Women's Shoe",
+      category: "Women's Shoes",
       color: "2 colours",
       image: "/images/nikejustin11.png",
       price: "₹ 8,195.00",
@@ -198,7 +198,7 @@ export const products = [
       {
       id: "16",
       title: "Nike Dunk Low Retro",
-      category: "Men's Shoe",
+      category: "Men's Shoes",
       color: "1 colour",
       image: "/images/nikejustin13.png",
       price: "₹ 8,695.00",
@@ -211,7 +211,7 @@ export const products = [
       {
       id: "17",
       title: "Nike Air Max SC",
-      category: "Women's Shoe",
+      category: "Women's Shoes",
       color: "2 colours",
       image: "/images/nikejustin14.png",
       price: "₹ 5,995.00",

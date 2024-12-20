@@ -22,13 +22,13 @@ function TopNavbar() {
             <span className='pl-2 hover:text-colors-secondaryColor'>|</span>
             </li>
             <li className='pl-2 hover:text-colors-secondaryColor'>
-            <Link href="/">
+            <Link href="/joinUs">
             Join Us 
             </Link>
             <span className='pl-2'>|</span>
             </li>
             <li className='pl-2 hover:text-colors-secondaryColor'>
-            <Link href="/">
+            <Link href="/signIn">
             Sign In  
             </Link>
             </li>

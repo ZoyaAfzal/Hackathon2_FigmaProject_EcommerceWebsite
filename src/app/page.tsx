@@ -2,7 +2,6 @@ import Banner from "@/components/banner";
 import BannerBottom from "@/components/bannerbottom";
 import Essentials from "@/components/essentials";
 import Categories from "@/components/categories";
-import Footer from "@/components/footer";
 import Header from "@/components/header";
 import NikeAir from "@/components/nikeAir";
 import Products from "@/components/products";
@@ -18,7 +17,6 @@ export default function Home() {
     <Products />
     <Essentials />
     <Categories />
-    <Footer />
    </div>
   );
 }

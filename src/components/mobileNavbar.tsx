@@ -31,7 +31,7 @@ function MobileNavbar() {
             <SheetDescription>
               <ul className="flex flex-col gap-4 text-[#111111] justify-start items-start">
                 <li className="hover:text-colors-secondaryColor">
-                  <Link href="/news">News & Featured</Link>
+                  <Link href="/featuredProducts">News & Featured</Link>
                 </li>
                 <li className="hover:text-colors-secondaryColor">
                   <Link href="/men">Men</Link>

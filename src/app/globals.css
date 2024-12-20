@@ -12,7 +12,7 @@ body {
   object-fit: cover;
 }
 input:focus {
-  outline: 2px solid #757575; 
+  outline: 2px solid #8D8D8D; 
   outline-offset: 1px;  
 }
 

@@ -19,6 +19,8 @@ const ProductCard = ({ product }: { product: Product }) => {
       <Image
         src={product.image}
         alt={product.title}
+        width={348}
+        height={348}
         className="w-[348px] h-[348px] object-cover rounded-t-sm hover:border-[1px] hover:border-gray-600"
       />
       {/* Product Details */}
