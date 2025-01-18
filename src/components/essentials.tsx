@@ -8,7 +8,7 @@ import essential3 from "../../public/images/essential3.png";
 
 function Essentials() {
   return (
-    <div className="max-w-[1344px] w-full h-auto flex flex-col items-center justify-center px-4 md:mt-[1400px] lg:mt-[80%] sm:mt-[200%] mt-[580%]">
+    <div className="max-w-[1344px] w-full h-auto flex flex-col items-center justify-center px-4 md:mt-[1400px] lg:mt-[14%] sm:mt-[20%]  mt-10">
       {/* Section Heading */}
       <h3 className="text-black flex text-xl md:text-3xl font-semibold font-sans self-start mb-4  md:mr-[62%] lg:mr-[88%] hover:text-colors-secondaryColor">
         Don&apos;t Miss
@@ -37,7 +37,7 @@ function Essentials() {
         </p>
 
         {/* Shop Button */}
-        <button className="relative bottom-[110%] w-[110px] h-[40px]  md:w-[130px] lg:w-[140px] rounded-3xl bg-black text-white hover:bg-colors-secondaryColor text-sm md:text-base mt-4 md:mt-[2%] lg:mt-[2%]">
+        <button className="bottom-[110%] w-[110px] h-[40px]  md:w-[130px] lg:w-[140px] rounded-3xl bg-black text-white hover:bg-colors-secondaryColor text-sm md:text-base mt-4 md:mt-[2%] lg:mt-[2%]">
           Shop
         </button>
       </div>

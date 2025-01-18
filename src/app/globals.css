@@ -16,6 +16,7 @@ input:focus {
   outline-offset: 1px;  
 }
 
+
 @media (max-width: 640px) {
   .slider-image {
     height: 600px;  /* Increase height for smaller screens */

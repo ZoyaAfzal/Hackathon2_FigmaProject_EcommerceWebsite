@@ -1,6 +1,4 @@
 import React from 'react';
-//import { PiClockClockwiseBold } from "react-icons/pi";
-//import { FaPinterest } from "react-icons/fa";
 import { FaFacebookF } from "react-icons/fa";
 import { FaTwitter } from "react-icons/fa";
 import { TiSocialInstagram } from "react-icons/ti";

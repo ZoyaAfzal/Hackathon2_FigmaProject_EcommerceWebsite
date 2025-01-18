@@ -11,10 +11,10 @@ import Link from 'next/link';
 function MainNav() {
 
   return (
-    <div className='hidden md:flex w-full h-16 justify-between items-center border-b-[1px] border-gray-200 pl-14 cursor-pointer '>
+    <div className='sm:hidden md:flex max-w-[1440px] xl:max-w-[2000px] w-full h-16 justify-between items-center border-b-[1px] border-gray-200 pl-14 cursor-pointer '>
       <Image src={nike} alt="nikelogo2" width={59} height={20}/>
       { /* categories */ }
-      <ul className='flex gap-9 lg:mr-[36%] font-semibold text-[#111111] md:gap-4 md:mr-[28%]'>
+      <ul className='flex gap-10 lg:mr-0 lg:ml-36 font-semibold text-[#111111] md:gap-4 md:mr-[2%]'>
         <li className='hover:text-colors-secondaryColor hover:underline duration-200'><Link href="/featuredProducts">News & Featured</Link></li>
         <li className='hover:text-colors-secondaryColor hover:underline duration-200'><Link href="/men">Men</Link></li>
         <li className='hover:text-colors-secondaryColor hover:underline duration-200'><Link href="/women">Women</Link></li>
@@ -25,9 +25,9 @@ function MainNav() {
 
 
    
-      <div className="absolute right-12 flex items-center space-x-4">
-            <div className="relative w-44 lg:flex items-center bg-neutral-100 rounded-full px-4 py-2 hidden">
-            <IoSearchOutline className="w-6 h-6 text-gray-700 hover:text-colors-secondaryColor absolute left-3" />
+      <div className="right-12 flex items-center space-x-4 mr-8">
+            <div className="w-44 lg:flex items-center bg-neutral-100 rounded-full px-4 py-2 hidden">
+            <IoSearchOutline className="w-6 h-6 text-gray-700 hover:text-colors-secondaryColor left-3" />
             <input
               type="text"
               placeholder="Search"
@@ -35,7 +35,9 @@ function MainNav() {
             />
             </div>
             <div className="flex gap-6 pl-2">
+            <Link href="/addTowishlist">
             <FaRegHeart className='text-[20px] text-[#464444] hover:text-colors-secondaryColor'/>
+            </Link>
            <Link href="/addToCart">
            <IoBagOutline className='text-[20px] text-[#111111] hover:text-colors-secondaryColor'/>    
            </Link> 

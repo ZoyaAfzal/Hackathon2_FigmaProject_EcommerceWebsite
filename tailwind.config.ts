@@ -10,7 +10,7 @@ const config: Config = {
   theme: {
   	extend: {
 		screens: {
-			xs: '480px', // Add extra small screens if needed
+			xs: '400px', // Add extra small screens if needed
 		  },
   		colors: {
   			background: 'hsl(var(--background))',

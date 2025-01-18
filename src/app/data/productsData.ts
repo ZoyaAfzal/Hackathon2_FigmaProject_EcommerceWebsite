@@ -38,7 +38,7 @@ export const products = [
       details: "Color Shown: White/Black", 
       style: "Style: DX1156-100.",
     },
-    {
+     {
       id: "4",
       title: "Nike Standard Issue",
       category: "Women's Jersey",
@@ -51,6 +51,20 @@ export const products = [
       details: "Material: 100% Cotton", 
       style: "Style: DR8900-010.",
     },
+    {
+      id: "4",
+      title: "Nike Air Force 1 React",
+      category: "Men's Shoes",
+      color: "1 colour",
+      price: "₹ 13,295.00",
+      image: "/images/nikejustin4.png",
+      tag: "Just In",
+      description:"A modern reinterpretation of a timeless classic, combining iconic design with cutting-edge comfort and React technology.",
+      details: "Crafted with durable materials for daily wear and a responsive React midsole for unparalleled cushioning and support. Ideal for casual or athletic use.", 
+      style: "Style: DR8900-010.",
+    },
+
+   
     {
       id: "5",
       title: "Nike Dunk Low Retro SE",

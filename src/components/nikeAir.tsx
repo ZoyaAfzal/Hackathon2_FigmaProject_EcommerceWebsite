@@ -2,11 +2,58 @@ import Image from "next/image";
 import React from "react";
 import { FaAngleRight } from "react-icons/fa6";
 import { FaChevronLeft } from "react-icons/fa";
-import nikeairmax1 from "../../public/images/nikeairmax1.png";
-import nikeairmax2 from "../../public/images/nikeairmax2.png";
-import nikeairmax3 from "../../public/images/nikeairmax3.png";
+import { createClient } from '@sanity/client';
 
-function NikeAir() {
+
+
+// Create Sanity client
+const client = createClient({
+  projectId: process.env.NEXT_PUBLIC_SANITY_PROJECT_ID,
+  dataset: process.env.NEXT_PUBLIC_SANITY_DATASET,
+  useCdn: false,
+  token: process.env.SANITY_API_TOKEN,
+  apiVersion: '2021-08-31',
+});
+
+
+interface Category {
+  _id: string;
+  name: string;
+  image: string;
+  description: string;
+  price: number;
+  sizes: string[];
+  rating: number;
+  stock: number;
+  discount: number;
+  category: string;
+  color: string[];
+  details: string;
+  style: string;
+  tag: string;
+ 
+}
+
+
+
+async function NikeAir () {
+  const query = `*[_type == "category"] {
+    _id,
+    name,
+    "image": image.asset->url,
+    description,
+    price,
+    sizes,
+    rating,
+    stock,
+    discount,
+    category,
+    color,
+    details,
+    style,
+    tag,
+  }`;
+    const categories: Category[] = await client.fetch(query);
   return (
     <div className="w-full flex flex-col items-center justify-center mt-10 lg:mt-18 px-4 sm:px-8 ">
       {/* Header Section */}
@@ -46,10 +93,9 @@ function NikeAir() {
           </div>
         </div>
 
-        {/* Product Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-10">
-          {/* Product Card 1 */}
-          <div className="relative flex flex-col items-center">
+  {/*     
+     
+          <div className="flex flex-col items-center">
             <Image
               src={nikeairmax1}
               alt="Nike Air Max Pulse"
@@ -57,7 +103,7 @@ function NikeAir() {
               height={441}
               className="w-full rounded-lg"
             />
-            <div className="absolute bottom-0 w-full bg-white p-4">
+            <div className="bottom-0 w-full bg-white p-4">
               <div className="flex justify-between items-center">
                 <h2 className="text-sm font-semibold hover:text-colors-secondaryColor">Nike Air Max Pulse</h2>
                 <span className="font-semibold text-sm hover:text-colors-secondaryColor">₹13,995</span>
@@ -66,8 +112,8 @@ function NikeAir() {
             </div>
           </div>
 
-          {/* Product Card 2 */}
-          <div className="relative flex flex-col items-center">
+        
+          <div className="flex flex-col items-center">
             <Image
               src={nikeairmax2}
               alt="Nike Air Max Pulse"
@@ -75,7 +121,7 @@ function NikeAir() {
               height={441}
               className="w-full rounded-lg"
             />
-            <div className="absolute bottom-0 w-full bg-white p-4">
+            <div className="bottom-0 w-full bg-white p-4">
               <div className="flex justify-between items-center">
                 <h2 className="text-sm font-semibold hover:text-colors-secondaryColor">Nike Air Max Pulse</h2>
                 <span className="font-semibold text-sm hover:text-colors-secondaryColor">₹13,995</span>
@@ -85,8 +131,8 @@ function NikeAir() {
           </div>
 
         
-                   {/* Product Card 3 */}
-          <div className="relative flex flex-col items-center">
+                
+          <div className="flex flex-col items-center">
             <Image
               src={nikeairmax3}
               alt="Nike Air Max Pulse"
@@ -94,19 +140,48 @@ function NikeAir() {
               height={441}
               className="w-full rounded-lg"
             />
-            <div className="absolute bottom-0 w-full bg-white p-4">
+            <div className="bottom-0 w-full bg-white p-4">
               <div className="flex justify-between items-center">
                 <h2 className="text-sm font-semibold hover:text-colors-secondaryColor">Nike Air Max Pulse</h2>
                 <span className="font-semibold text-sm hover:text-colors-secondaryColor">₹13,995</span>
               </div>
               <span className="text-gray-600 text-sm">Men&apos;s Shoes</span>
             </div>
-          </div>
+          </div> */}
+
+
+
+      {/* Categories Section */} 
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"> 
+          {categories.map((category) => (
+            <div key={category._id} className="bg-gray-100 p-4 rounded-lg shadow-md hover:shadow-lg">
+              <div className="flex flex-col items-center">
+                <Image
+                  src={category.image}
+                  alt={category.name}
+                  width={400}
+                  height={400}
+                  className="w-full h-64 object-cover rounded-sm"
+                />
+                  <div className="bottom-0 w-full bg-white/25 p-2">
+                  <div className="flex justify-between items-center">
+                <h3 className="text-lg font-semibold text-[#111111] mt-4">{category.name}</h3>
+                <span className="font-semibold text-sm hover:text-colors-secondaryColor">MRP: {" "}₹{category.price}.00</span>
+                </div>
+                <span className="text-gray-600 text-sm">{category.category}</span>
+              </div>
+            </div>
         </div>
+        
+      ))}
       </div>
-    </div>
-  );
-}
+      
+     </div>
+  </div>
+  
+);
+};
+
 
 export default NikeAir;
 
