@@ -6,7 +6,7 @@ import { FaShoppingCart } from "react-icons/fa";
 
 function CustomTopNavbar() {
   return (
-    <nav className="max-w-[1440px] w-full h-[40px] border-[1px] flex justify-between items-center px-8">
+    <nav className="max-w-[1320px] lg:w-[1320px] w-full h-[40px] border-[1px] flex justify-between items-center px-8">
         <div className="flex gap-2">
         <FaChevronLeft className='text-[#757575] text-sm mt-1'/>
         <span className='flex text-[#757575] text-sm'>Visit Nike.com</span>

@@ -5,7 +5,7 @@ import MobileNavbar from '@/components/mobileNavbar';
 
 function SignIn() {
   return (
-    <div className="max-w-[1440px] w-full mx-auto h-auto ">  
+    <div className="max-w-[1344px] w-full mx-auto h-auto ">  
      <div className="md:hidden">
     <MobileNavbar/>
     </div>  
@@ -16,7 +16,12 @@ function SignIn() {
         </div>
         <h1 className='uppercase text-3xl text-gray-900 font-semibold mt-6 font-sans gap-3 mx-16'>Your Account <span>For Everything</span> <span className='ml-20'>Nike</span></h1>
         <input type="text" className="w-[324px] h-10 border-[1px] bg-[#FFFFFF] border-[#E5E5E5] text-[#8D8D8D] text-sm mt-6 px-4 mx-7" placeholder='Email Address'/>
-        <input type="text" className="w-[324px] h-10 border-[1px] bg-[#FFFFFF] border-[#E5E5E5] text-[#8D8D8D] text-sm mt-4 px-4 mx-7" placeholder='Psssword'/>
+        <input type="text" className="w-[324px] h-10 border-[1px] bg-[#FFFFFF] border-[#E5E5E5] text-[#8D8D8D] text-sm mt-4 px-4 mx-7" placeholder='Password'/>
+        <input type="text" className="w-[324px] h-10 border-[1px] bg-[#FFFFFF] border-[#E5E5E5] text-[#8D8D8D] text-sm mt-4 px-4 mx-7" placeholder='SavedAddress'/>
+        <h3 className="text-2xl font-semibold uppercase text-gray-900 text-center mt-4 font-sans">Order History</h3>
+        <input type="text" className="w-[324px] h-10 border-[1px] bg-[#FFFFFF] border-[#E5E5E5] text-[#8D8D8D] text-sm mt-4 px-4 mx-7" placeholder='Order ID'/>
+        <input type="text" className="w-[324px] h-10 border-[1px] bg-[#FFFFFF] border-[#E5E5E5] text-[#8D8D8D] text-sm mt-4 px-4 mx-7" placeholder='Order Date'/>
+        <input type="text" className="w-[324px] h-10 border-[1px] bg-[#FFFFFF] border-[#E5E5E5] text-[#8D8D8D] text-sm mt-4 px-4 mx-7" placeholder='Order Total'/>
          <div className="flex">
         <input type="checkbox" id="Keep me signed in" className='text-2xl text-[#8D8D8D] mt-8 ml-8 accent-gray-200' />
         <span className='mt-8 text-sm text-[#8D8D8D] ml-2'>Keep me signed in</span>

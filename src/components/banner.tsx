@@ -10,6 +10,9 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 
+
+
+
 interface ArrowProps {
   onClick?: () => void; 
 }
@@ -19,10 +22,10 @@ interface ArrowProps {
       const { onClick } = props;
       return (
         <div
-          className="w-10 h-10 absolute bottom-32 z-30 right-10 border-[1px] border-gray-700 px-2 hover:border-colors-bgColor bg-colors-bgColor hover:bg-colors-primaryColor  overflow-hidden"
+          className="w-10 h-10 absolute bottom-32 z-30 right-10 border-[1px] border-gray-700 px-2 hover:border-gray-800 bg-colors-bgColor hover:bg-colors-primaryColor overflow-hidden"
           onClick={onClick}
-        >
-          <div className="w-full h-full text-gray-600 hover:text-white text-sm uppercase relative flex items-center justify-end cursor-pointer group ">
+        > 
+          <div className="w-full max-w-[1320px] lg:w-[1266px] h-auto text-gray-600 hover:text-white text-sm uppercase flex relative items-center justify-between cursor-pointer group pt-3">
             <span className="text-lg ">
               <FaChevronRight />
             </span>
@@ -34,10 +37,10 @@ interface ArrowProps {
       const { onClick } = props;
       return (
         <div
-          className="w-10 h-10 absolute bottom-32 z-30 left-10 border-[1px] border-gray-900 px-2 hover:border-gray-800 bg-black/50 bg-colors-bgColor hover:bg-colors-primaryColor overflow-hidden"
+          className="w-10 h-10 absolute bottom-32 z-30 left-10 border-[1px] border-gray-700 px-2 hover:border-gray-800 bg-colors-bgColor  hover:bg-colors-primaryColor overflow-hidden"
           onClick={onClick}
         >
-          <div className="w-full h-full text-gray-600 hover:text-white text-sm uppercase relative flex items-center justify-between cursor-pointer group  ">
+          <div className="w-full h-full text-gray-600 hover:text-white text-sm uppercase relative flex items-center justify-end cursor-pointer group">
             <span className="text-lg ">
               <FaChevronLeft />
             </span>
@@ -59,26 +62,26 @@ interface ArrowProps {
 
 return (
 
-    <div className='w-full h-full relative'>
+    <div className='lg:w-[1266px]'>
          <Slider {...settings}>
         <div>
-        <Image src={nikebanner} alt="nikebanners" loading={"eager"}
-        className='slider-image lg:w-[1644px] lg:h-[700px] w-full h-full object-cover md:w-[968px] md:h-[700px] sm:w-[720px] sm:h-[700px]'
+        <Image src={nikebanner} alt="nikebanners" width={1060} height={700} loading="eager"
+        className='slider-image object-cover lg:w-[1266px] lg:h-[900px] md:w-[968px] sm:w-[720px] '
         />
         </div>
         <div>
-        <Image src={Nikeban} alt="nikebanners" loading={"lazy"}
-        className='slider-image lg:w-[1644px] lg:h-[700px] w-full h-full object-cover md:w-[968px] md:h-[700px] sm:w-[720px] sm:h-[700px] '
+        <Image src={Nikeban} alt="nikebanners"  width={1060} height={700} loading="lazy"
+        className='slider-image  object-cover lg:w-[1266px] lg:h-[900px] md:w-[968px] sm:w-[720px] '
         />
         </div>
         <div>
-        <Image src={bannernike2} alt="nikebanners"  loading={"lazy"}
-        className='slider-image  lg:w-[1644px] lg:h-[700px] w-full h-full object-cover md:w-[968px] md:h-[700px] sm:w-[720px] sm:h-[700px]'
+        <Image src={bannernike2} alt="nikebanners" width={1060} height={500} loading="lazy" 
+        className='slider-image  object-cover lg:w-[1266px] md:w-[968px] sm:w-[720px] ]'
         />
         </div>
         <div>
-        <Image src={bannernike3} alt="nikebanners"  loading={"lazy"}
-        className='slider-image  lg:w-[1644px] lg:h-[700px] w-full h-full object-cover md:w-[968px] md:h-[700px] sm:w-[720px] sm:h-[700px]'
+        <Image src={bannernike3} alt="nikebanners"  width={1200} height={500} loading="lazy"
+        className='slider-image  object-cover lg:w-[1266px] md:w-[968px] sm:w-[720px] '
         />
         </div>
         </Slider>

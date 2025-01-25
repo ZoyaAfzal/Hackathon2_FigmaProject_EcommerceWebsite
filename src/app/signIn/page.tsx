@@ -3,7 +3,7 @@ import React from 'react';
 
 function AddToCart() {
   return (
-    <div className="max-w-[1440px] w-full mx-auto">  
+    <div className="max-w-[1344px] w-full mx-auto">  
     <div className="md:hidden">
     <MobileNavbar/>
         </div>  

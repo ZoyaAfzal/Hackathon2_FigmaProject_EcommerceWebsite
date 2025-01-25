@@ -28,7 +28,7 @@ const WishlistPage = () => {
   };
 
   return (
-    <div className="max-w-[1440px] w-full h-auto mx-auto p-6">
+    <div className="max-w-[1344px] w-full h-auto mx-auto p-6">
       <h1 className="text-2xl font-bold my-6">Your Wishlist</h1>
       {wishlistItems.length === 0 ? (
         <p>Your wishlist is empty.</p>
@@ -36,7 +36,7 @@ const WishlistPage = () => {
         wishlistItems.map((item) => (
           <div key={item._id} className="flex items-center justify-between border-b py-4">
             <div className="flex items-center gap-4">
-              <Image src={item.imageUrl} alt={item.name} className="w-16 h-16 object-cover" />
+              <Image src={item.imageUrl} alt={item.name} width={16} height={16} className="w-16 h-16 object-cover" />
               <div>
                 <p className="text-lg font-semibold">{item.name}</p>
                 <p className="text-sm">Size: {item.selectedSize}</p>

@@ -8,21 +8,21 @@ import essential3 from "../../public/images/essential3.png";
 
 function Essentials() {
   return (
-    <div className="max-w-[1344px] w-full h-auto flex flex-col items-center justify-center px-4 md:mt-[1400px] lg:mt-[14%] sm:mt-[20%]  mt-10">
+    <div className="lg:w-[1240px] max-w-[1320px] w-full xs:h-[1950px] lg:h-[1400px] xs:mt-20 h-auto flex flex-col items-center justify-center px-4 md:mt-[620px] lg:mt-2 sm:mt-[186%] ">
       {/* Section Heading */}
-      <h3 className="text-black flex text-xl md:text-3xl font-semibold font-sans self-start mb-4  md:mr-[62%] lg:mr-[88%] hover:text-colors-secondaryColor">
+      <h3 className="text-black flex text-xl md:text-3xl font-semibold font-sans self-start mb-4 md:mr-[62%] lg:ml-8 hover:text-colors-secondaryColor sm:ml-4">
         Don&apos;t Miss
       </h3>
 
-      <div className="max-w-[1344px] w-full h-auto flex flex-col items-center mt-4 ">
+      <div className="w-auto h-auto flex flex-col items-center mt-4 ml-8 sm:ml-4 xs:ml-4">
         {/* Image */}
-        <div className="w-full max-w-[1344px] h-auto">
+        <div>
           <Image
             src={essential}
             alt="Flight Essentials"
-            width={1344}
+            width={1180}
             height={700}
-            className="w-full h-auto"
+            priority
           />
         </div>
 
@@ -42,7 +42,7 @@ function Essentials() {
         </button>
       </div>
     
-<div className="max-w-[1344px] relative w-full h-auto grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-6 md:gap-4 mx-auto mt-20 px-4">
+<div className="lg:w-[1220px] max-w-[1320px] relative w-full h-auto grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-6 md:gap-4 xs:gap-0 mx-auto mt-20 px-4">
   <h3 className="text-black absolute text-xl sm:text-2xl md:text-3xl font-bold font-sans top-0 left-4 sm:left-6 mb-4 hover:text-colors-secondaryColor">
     The Essentials
   </h3>

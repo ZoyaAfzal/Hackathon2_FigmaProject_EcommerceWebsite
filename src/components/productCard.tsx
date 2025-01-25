@@ -15,16 +15,16 @@ type Product = {
 
 const ProductCard = ({ product }: { product: Product }) => {
   return (
-    <div className="border shadow-sm hover:shadow-lg transition-all ">
+    <div className="border shadow-sm hover:shadow-lg transition-all sm:w-[448px] md:w-[348px] sm:mx-24 md:mx-0">
       {/* Product Image */}
       <Image
         src={product.imageUrl}
         alt={product.name || "Product"}
         width={348}
         height={348}
-        className="w-[348px] h-[348px] object-cover rounded-t-sm hover:border-[1px] hover:border-gray-600"
+        className="md:w-[348px] h-[348px] sm:w-[448px] object-cover rounded-t-sm hover:border-[1px] hover:border-gray-600"
       />
-      {/* Product Details */}
+      {/* Product Details */} 
       <div className="p-4">
         <h4 className="text-[#9E3500] font-semibold text-[16px]">{product.tag}</h4>
         <h3 className="text-[16px] font-semibold">{product.name}</h3>

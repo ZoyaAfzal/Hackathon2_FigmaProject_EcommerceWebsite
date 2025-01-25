@@ -2,8 +2,8 @@ import React from "react";
 
 function Categories() {
   return (
-    <div className="max-w-[1344px] w-full flex justify-center items-center mt-20 px-4">
-      <div className="w-[880px] h-[190px] grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 md:gap-8 lg:gap-12">
+    <div className="lg:w-[1200px] max-w-[1320px] xs:h-[340px] md:h-[300px] w-full flex justify-center items-center sm:mt-[80%] md:mt-[30%] xs:mt-8 px-4 xs:mx-8">
+      <div className="w-[880px] h-[190px] grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 md:gap-8 lg:gap-12 lg:mr-32">
         {/* Icons Section */}
         <div className="w-full">
           <h3 className="h-6 text-lg font-semibold font-sans">Icons</h3>

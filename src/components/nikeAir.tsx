@@ -55,7 +55,7 @@ async function NikeAir () {
   }`;
     const categories: Category[] = await client.fetch(query);
   return (
-    <div className="w-full flex flex-col items-center justify-center mt-10 lg:mt-18 px-4 sm:px-8 ">
+    <div className="lg:w-[1266px] max-w-[1320px] w-full flex flex-col items-center justify-center mt-10 lg:mt-18 px-4 sm:px-8 ">
       {/* Header Section */}
       <div className="text-center">
         <h3 className="text-base sm:text-lg font-semibold text-[#111111] hover:text-colors-secondaryColor">
@@ -93,74 +93,17 @@ async function NikeAir () {
           </div>
         </div>
 
-  {/*     
-     
-          <div className="flex flex-col items-center">
-            <Image
-              src={nikeairmax1}
-              alt="Nike Air Max Pulse"
-              width={441}
-              height={441}
-              className="w-full rounded-lg"
-            />
-            <div className="bottom-0 w-full bg-white p-4">
-              <div className="flex justify-between items-center">
-                <h2 className="text-sm font-semibold hover:text-colors-secondaryColor">Nike Air Max Pulse</h2>
-                <span className="font-semibold text-sm hover:text-colors-secondaryColor">₹13,995</span>
-              </div>
-              <span className="text-gray-600 text-sm">Women&apos;s Shoes</span>
-            </div>
-          </div>
-
-        
-          <div className="flex flex-col items-center">
-            <Image
-              src={nikeairmax2}
-              alt="Nike Air Max Pulse"
-              width={441}
-              height={441}
-              className="w-full rounded-lg"
-            />
-            <div className="bottom-0 w-full bg-white p-4">
-              <div className="flex justify-between items-center">
-                <h2 className="text-sm font-semibold hover:text-colors-secondaryColor">Nike Air Max Pulse</h2>
-                <span className="font-semibold text-sm hover:text-colors-secondaryColor">₹13,995</span>
-              </div>
-              <span className="text-gray-600 text-sm">Men&apos;s Shoes</span>
-            </div>
-          </div>
-
-        
-                
-          <div className="flex flex-col items-center">
-            <Image
-              src={nikeairmax3}
-              alt="Nike Air Max Pulse"
-              width={441}
-              height={441}
-              className="w-full rounded-lg"
-            />
-            <div className="bottom-0 w-full bg-white p-4">
-              <div className="flex justify-between items-center">
-                <h2 className="text-sm font-semibold hover:text-colors-secondaryColor">Nike Air Max Pulse</h2>
-                <span className="font-semibold text-sm hover:text-colors-secondaryColor">₹13,995</span>
-              </div>
-              <span className="text-gray-600 text-sm">Men&apos;s Shoes</span>
-            </div>
-          </div> */}
-
-
 
       {/* Categories Section */} 
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"> 
-          {categories.map((category) => (
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 xs:mt-2"> 
+          {categories.map((category) => ( 
             <div key={category._id} className="bg-gray-100 p-4 rounded-lg shadow-md hover:shadow-lg">
-              <div className="flex flex-col items-center">
+              <div className="flex flex-col items-center sm:mt-2">
                 <Image
                   src={category.image}
                   alt={category.name}
                   width={400}
-                  height={400}
+                  height={480}
                   className="w-full h-64 object-cover rounded-sm"
                 />
                   <div className="bottom-0 w-full bg-white/25 p-2">

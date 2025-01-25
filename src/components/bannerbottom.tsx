@@ -4,7 +4,7 @@ import banner from "../../public/images/banner.png";
 
 function BannerBottom() {
   return (
-    <div className="flex flex-col items-center justify-center w-full max-w-[1344px] mx-auto px-4 md:mt-12 sm:mt-0">
+    <div className="flex flex-col items-center justify-center w-full lg:w-[1266px] max-w-[1320px] px-8 md:mt-12 sm:mt-20">
       {/* Featured Title */}
       <h3 className="text-black text-3xl font-semibold font-sans mt-20 md:mt-16 md:text-3xl xl:text-4xl self-start md:mr-2 sm:mt-0 hover:text-colors-secondaryColor">
         Featured
@@ -16,9 +16,9 @@ function BannerBottom() {
         <Image
           src={banner}
           alt="banner"
-          width={1344}
+          width={1180}
           height={700}
-          className="w-full h-[600px] object-cover"
+          className=" h-[700px] object-cover"
         />
 
         {/* Overlay Text */}
@@ -32,7 +32,7 @@ function BannerBottom() {
         </div>
 
         {/* Button */}
-        <button className="top-[124%] sm:mt-2 bg-black hover:bg-colors-secondaryColor md:top-[126%] lg:top-[124%] w-[140px] h-[40px] md:w-[152px] md:h-[42px] rounded-3xl text-white cursor-pointer">
+        <button className="top-[124%] xs:mt-6 bg-black hover:bg-colors-secondaryColor md:mt-0 lg:top-[124%] w-[140px] h-[40px] md:w-[152px] md:h-[42px] rounded-3xl text-white cursor-pointer">
           Find Your Shoe
         </button>
       </div>

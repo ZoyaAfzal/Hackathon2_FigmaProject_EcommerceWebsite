@@ -23,7 +23,7 @@ function MenCategorySection() {
     // Fetch all products from Sanity
     client
       .fetch(
-        `*[_type == "product" && category in $categories]{
+        `*[_type == "products" && category in $categories]{
           _id,
           name,
           price,
