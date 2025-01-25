@@ -8,7 +8,7 @@ import essential3 from "../../public/images/essential3.png";
 
 function Essentials() {
   return (
-    <div className="lg:w-[1240px] max-w-[1320px] w-full xs:h-[1950px] lg:h-[1400px] xs:mt-20 h-auto flex flex-col items-center justify-center px-4 md:mt-[620px] lg:mt-2 sm:mt-[186%] ">
+    <div className="lg:w-[1240px] max-w-[1320px] w-full xs:h-[1950px] lg:h-[1420px] xs:mt-20 h-auto flex flex-col items-center justify-center px-4 md:mt-[620px] lg:mt-2 sm:mt-[186%] ">
       {/* Section Heading */}
       <h3 className="text-black flex text-xl md:text-3xl font-semibold font-sans self-start mb-4 md:mr-[62%] lg:ml-8 hover:text-colors-secondaryColor sm:ml-4">
         Don&apos;t Miss

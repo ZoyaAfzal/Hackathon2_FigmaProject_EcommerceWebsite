@@ -1,4 +1,4 @@
-'use client'
+'use client';
 import { IoMdSwitch } from 'react-icons/io';
 import { RiArrowDropUpLine } from 'react-icons/ri';
 import { client } from '@/sanity/lib/client';
@@ -65,9 +65,6 @@ const NewsandFeatured = () => {
   const handleSearchChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const query = e.target.value;
     setSearchQuery(query);
-   // if (onSearch) {
-    //  onSearch(query);
-   // }
   };
 
   const handleCheckboxChange = (
@@ -170,7 +167,7 @@ const NewsandFeatured = () => {
       </div>
 
     
-      <div className="w-full lg:w-[1266px] max-w-[1320px] flex flex-col lg:flex-row justify-between items-center px-6 lg:pr-12 mt-16 lg:mt-8">
+      <div className="w-full lg:w-[1200px] max-w-[1320px] flex flex-col lg:flex-row justify-between items-center px-6 lg:pr-12 mt-16 lg:mt-8">
         <h1 className="text-2xl font-bold">New (500)</h1>
         <ul className="flex gap-6 mt-4 lg:mt-0 text-[16px] font-medium ml-40 xs:ml-0 lg:ml-20">
           <li>
@@ -184,9 +181,9 @@ const NewsandFeatured = () => {
             />
           </li>
         </ul>
-        <ul className="flex gap-6 mt-4 lg:mt-0 text-[16px] font-medium">
-          <li className="flex items-center">
-            Hide Filters <IoMdSwitch className="ml-2 text-xl" />
+        <ul className="flex gap-6 mt-4 lg:mt-0 text-[16px] font-medium ml-20">
+          <li className="flex items-center ">
+            Hide Filters <IoMdSwitch className="text-center" />
           </li>
           <li className="flex items-center">
             <label htmlFor="sort"></label>
@@ -229,7 +226,7 @@ const NewsandFeatured = () => {
             { label: 'Shop by Price', options: ['Under ₹ 2,500.00', '₹ 2,501.00 - ₹'], state: selectedPrice, setState: setSelectedPrice },
           ].map(({ label, options, state, setState }, idx) => (
             <div key={idx}>
-              <div className="flex justify-between items-center mt-44 xs:mt-8 border-t md:mx-10 lg:mt-24 lg:w-52 lg:mx-4">
+              <div className="flex justify-between items-center mt-44 xs:mt-8 border-t md:mx-10 lg:mt-44 lg:w-52 lg:mx-4">
                 <h3 className="font-semibold text-lg mb-2 pt-6">{label}</h3>
                 <RiArrowDropUpLine className="text-3xl pt-2" />
               </div>
@@ -334,5 +331,4 @@ const NewsandFeatured = () => {
 };
 
 export default NewsandFeatured; 
-
 

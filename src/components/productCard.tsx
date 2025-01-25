@@ -15,7 +15,7 @@ type Product = {
 
 const ProductCard = ({ product }: { product: Product }) => {
   return (
-    <div className="border shadow-sm hover:shadow-lg transition-all sm:w-[448px] md:w-[348px] sm:mx-24 md:mx-0">
+    <div className="border shadow-sm hover:shadow-lg transition-all sm:w-[448px] lg:w-[300px] md:w-[348px] sm:mx-24 md:mx-0">
       {/* Product Image */}
       <Image
         src={product.imageUrl}
