@@ -5,7 +5,7 @@ import Link from 'next/link';
 
 function TopNavbar() {
   return (
-    <div className='sticky max-w-[1320px] lg:w-[1266px]  md:w-[780px] hidden md:flex top-0 w-full h-9 bg-colors-bgColor justify-between items-center pl-14'>
+    <div className='sticky max-w-[1320px] lg:w-[1262px]  md:w-[780px] hidden md:flex top-0 w-full h-9 bg-colors-bgColor justify-between items-center pl-14'>
     <Image src={nikelogo} alt="nikelogo" width={24} height={24} priority/>
     <div className='flex gap-2'>
         <ul className='flex text-[14px] text-black font-semibold cursor-pointer font-sans pr-10'>

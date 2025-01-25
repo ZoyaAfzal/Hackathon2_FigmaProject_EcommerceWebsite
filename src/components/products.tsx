@@ -11,7 +11,7 @@ import Image from 'next/image';
 
 function Products() {
   return (
-    <div className="lg:w-[1180px] max-w-[1320px] md:w-[700px] sm:w-[600px] xs:w-[340px] w-full h-auto xs:mt-[20%] px-4 md:mt-[14%] sm:mt-[18%] mt-[20%] sm:h-[700px] lg:mt-28 ml-8">
+    <div className="lg:w-[1174px] max-w-[1320px] md:w-[700px] sm:w-[600px] xs:w-[340px] w-full h-auto xs:mt-[20%] px-4 md:mt-[14%] sm:mt-[18%] mt-[20%] sm:h-[700px] lg:mt-28 ml-8">
       {/* Header Section */}
       <div className="flex flex-col lg:flex-row justify-between items-center lg:items-start">
         <h3 className="text-3xl md:text-4xl font-semibold font-sans hover:text-colors-secondaryColor">

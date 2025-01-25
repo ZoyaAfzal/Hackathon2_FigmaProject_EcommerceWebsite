@@ -28,8 +28,7 @@ interface Product {
 }
 
 
-
-const NewsandFeatured = () => {
+const FeaturedProducts = () => {
   const [filters] = useState({
     priceRange: [0, 10000] as [number, number],
     inStockOnly: false,
@@ -330,5 +329,5 @@ const NewsandFeatured = () => {
   );
 };
 
-export default NewsandFeatured; 
+export default FeaturedProducts; 
 

@@ -11,14 +11,14 @@ import Link from 'next/link';
 const MainNav = ({ onSearch = () => {}  }: { onSearch?: (query: string) => void }) => {
   const [searchQuery, setSearchQuery] = useState('');
 const [maxWidthClass, setMaxWidthClass] = useState(() =>
-  typeof window !== 'undefined' && window.innerWidth >= 1266
+  typeof window !== 'undefined' && window.innerWidth >= 1262
     ? 'max-w-[1320px]'
-    : 'lg:w-[1266px]'
+    : 'lg:w-[1262px]'
 );
 
   useEffect(() => {
     const handleResize = () => {
-      setMaxWidthClass(window.innerWidth >= 1266 ? 'max-w-[1320px]' : 'lg:w-[1266px]');
+      setMaxWidthClass(window.innerWidth >= 1262 ? 'max-w-[1320px]' : 'lg:w-[1262px]');
     };
 
     window.addEventListener('resize', handleResize);
@@ -38,7 +38,9 @@ const [maxWidthClass, setMaxWidthClass] = useState(() =>
       <ul className="flex gap-10 lg:mr-0 lg:ml-36 font-semibold text-[#111111] md:gap-4 md:mr-[2%]">
         {['News & Featured', 'Men', 'Women', 'Kids', 'Sale', 'SNRKS'].map((item, index) => (
           <li key={index} className="hover:text-colors-secondaryColor hover:underline duration-200">
-            <Link href={`/${item.toLowerCase().replace(/\s+/g, '')}`}>{item}</Link>
+             <Link
+        href={`/${item.toLowerCase().replace(/\s+/g, '-').replace('&', 'and')}`}
+      >{item}</Link>
           </li>
         ))}
       </ul>
@@ -60,7 +62,7 @@ const [maxWidthClass, setMaxWidthClass] = useState(() =>
           <Link href="/addTowishlist">
             <FaRegHeart className="text-[20px] text-[#464444] hover:text-colors-secondaryColor" />
           </Link>
-          <Link href="/addToCart">
+          <Link href="/addTocart">
             <IoBagOutline className="text-[20px] text-[#111111] hover:text-colors-secondaryColor" />
           </Link>
         </div>

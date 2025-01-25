@@ -233,7 +233,7 @@ const ProductDetails = ({ params }: ProductDetailsProps) => {
     localStorage.setItem("cart", JSON.stringify([...currentCart, cartItem]));
 
     alert("Product added to bag!");
-    window.location.href = "/addToCart";
+    window.location.href = "/addTocart";
   };
 
   const handleAddToWishlist = () => {

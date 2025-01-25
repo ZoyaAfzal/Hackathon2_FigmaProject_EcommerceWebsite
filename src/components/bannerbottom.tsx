@@ -4,7 +4,7 @@ import banner from "../../public/images/banner.png";
 
 function BannerBottom() {
   return (
-    <div className="flex flex-col items-center justify-center w-full lg:w-[1266px] max-w-[1320px] px-8 md:mt-12 sm:mt-20 lg:mt-20">
+    <div className="flex flex-col items-center justify-center w-full lg:w-[1262px] max-w-[1320px] px-8 md:mt-12 sm:mt-20 lg:mt-20">
       {/* Featured Title */}
       <h3 className="text-black text-3xl font-semibold font-sans mt-20 md:mt-16 md:text-3xl xl:text-4xl self-start md:mr-2 sm:mt-0 hover:text-colors-secondaryColor">
         Featured

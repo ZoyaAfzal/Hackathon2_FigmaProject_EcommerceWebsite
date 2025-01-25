@@ -25,7 +25,7 @@ interface ArrowProps {
           className="w-10 h-10 absolute bottom-32 z-30 right-10 border-[1px] border-gray-700 px-2 hover:border-gray-800 bg-colors-bgColor hover:bg-colors-primaryColor overflow-hidden"
           onClick={onClick}
         > 
-          <div className="w-full max-w-[1320px] lg:w-[1266px] h-auto text-gray-600 hover:text-white text-sm uppercase flex relative items-center justify-between cursor-pointer group pt-3">
+          <div className="w-full max-w-[1320px] lg:w-[1262px] h-auto text-gray-600 hover:text-white text-sm uppercase flex relative items-center justify-between cursor-pointer group pt-3">
             <span className="text-lg ">
               <FaChevronRight />
             </span>

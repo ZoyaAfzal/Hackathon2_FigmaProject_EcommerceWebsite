@@ -55,7 +55,7 @@ async function NikeAir () {
   }`;
     const categories: Category[] = await client.fetch(query);
   return (
-    <div className="lg:w-[1266px] max-w-[1320px] w-full flex flex-col items-center justify-center mt-10 lg:mt-18 px-4 sm:px-8 ">
+    <div className="lg:w-[1262px] max-w-[1320px] w-full flex flex-col items-center justify-center mt-10 lg:mt-18 px-4 sm:px-8 ">
       {/* Header Section */}
       <div className="text-center">
         <h3 className="text-base sm:text-lg font-semibold text-[#111111] hover:text-colors-secondaryColor">
