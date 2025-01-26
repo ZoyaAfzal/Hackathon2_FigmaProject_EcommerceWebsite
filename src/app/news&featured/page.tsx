@@ -28,7 +28,7 @@ interface Product {
 }
 
 
-const FeaturedProducts = () => {
+const NewsAndFeatured = () => {
   const [filters] = useState({
     priceRange: [0, 10000] as [number, number],
     inStockOnly: false,
@@ -256,7 +256,7 @@ const FeaturedProducts = () => {
           <div className="w-full lg:w-[80%] grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 px-4 lg:px-6 md:mt-12 mt-8 lg:mt-0 md:ml-4">
             {currentProducts.length > 0 ? (
               currentProducts.map((product) => (
-                <Link key={product._id} href={`/featuredProducts/${product._id}`}>
+                <Link key={product._id} href={`/news&featured/${product._id}`}>
                   <ProductCard product={product} />
                 </Link>
               ))
@@ -329,5 +329,5 @@ const FeaturedProducts = () => {
   );
 };
 
-export default FeaturedProducts; 
+export default NewsAndFeatured; 
 

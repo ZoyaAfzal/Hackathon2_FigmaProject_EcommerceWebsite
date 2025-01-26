@@ -1,5 +1,4 @@
 'use client';
-
 import Image from 'next/image';
 import React, { useState, useEffect } from 'react';
 import nike from "../../public/images/nike.png";
@@ -38,9 +37,14 @@ const [maxWidthClass, setMaxWidthClass] = useState(() =>
       <ul className="flex gap-10 lg:mr-0 lg:ml-36 font-semibold text-[#111111] md:gap-4 md:mr-[2%]">
         {['News & Featured', 'Men', 'Women', 'Kids', 'Sale', 'SNRKS'].map((item, index) => (
           <li key={index} className="hover:text-colors-secondaryColor hover:underline duration-200">
-             <Link
-        href={`/${item.toLowerCase().replace(/\s+/g, '-').replace('&', 'and')}`}
-      >{item}</Link>
+            <Link
+        href={item === 'News & Featured'
+          ? '/news&featured'  // Specific case for News & Featured
+          : `/${item.toLowerCase().replace(/\s+/g, '-').replace('&', 'and')}`
+        }
+      >
+        {item}
+      </Link>
           </li>
         ))}
       </ul>
@@ -62,7 +66,7 @@ const [maxWidthClass, setMaxWidthClass] = useState(() =>
           <Link href="/addTowishlist">
             <FaRegHeart className="text-[20px] text-[#464444] hover:text-colors-secondaryColor" />
           </Link>
-          <Link href="/addTocart">
+          <Link href="/addtocart">
             <IoBagOutline className="text-[20px] text-[#111111] hover:text-colors-secondaryColor" />
           </Link>
         </div>

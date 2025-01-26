@@ -11,11 +11,6 @@ function KidsCategorySection() {
 
 
       const selectedCategories = ["Older Kids' Shoe", "Older Kids' Shoes"];    
-          
-       { /*  const filteredProducts = products.filter((product) =>
-            selectedCategories.includes(product.category) 
-          ); */}
-
           useEffect(() => {
               client
                 .fetch(
@@ -50,7 +45,7 @@ function KidsCategorySection() {
         ) : (
       <div className="w-full lg:w-[80%] grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 px-4 lg:px-6 md:mt-12 mt-8 lg:mt-12">
         {products.map((product) => (
-          <Link key={product} href={`/featuredProducts/${ProductCard}`}>
+          <Link key={product} href={`/news&featured/${ProductCard}`}>
             <ProductCard  product={product} />
           </Link>
         ))}

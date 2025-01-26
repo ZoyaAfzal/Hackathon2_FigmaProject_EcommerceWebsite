@@ -1,151 +1,10 @@
-'use client'
-{ /*import React, { useEffect, useState } from "react";
-import { RiArrowDropDownLine } from "react-icons/ri";
-import { RiArrowDropUpLine } from "react-icons/ri";
-import { client } from '@/sanity/lib/client';
-import Image from 'next/image';
-import MobileNavbar from '@/components/mobileNavbar';
-import ReviewsAndRatings from "../../../components/review"; 
-
-
-interface Product {
-  _id: string;
-  name: string;
-  imageUrl: string;
-  description: string;
-  price: number;
-  sizes: string[];
-  rating: number;
-  stock: number;
-  discount: number;
-  category: string;
-  color: string[];
-  details: string;
-  style: string;
-  tag: string;
-  id: string;
-}
-
-interface ProductDetailsProps {
-  params: { id: string };
-  
-}
-
-const ProductDetails =  ({ params }: ProductDetailsProps) => {
-  const { id } = params;
-  const [product, setProduct] = useState<Product | null>(null);
-  const [loading, setLoading] = useState<boolean>(true);
-  const [selectedSize, setSelectedSize] = useState<string | null>(null);
-  const [quantity, setQuantity] = useState<number>(0);
-  const [showReviews, setShowReviews] = useState(false);
-  //const [wishlistItems, setWishlistItems] = useState<any[]>([]);
-  
-  
-  useEffect(() => {
-    const fetchProduct = async () => {
-      try {
-  const query = `*[_type == "products" &&  _id == $id][0]{
-    _id, name, "imageUrl": image.asset->url, description, price, sizes, rating,
-    stock, discount,
-    category, color, details, style, tag , id
-    }`;
-    
-   const fetchedProduct: Product = await client.fetch(query, { id });
-   setProduct(fetchedProduct);
-    } catch (error) {
-      console.error("Error fetching product:", error);
-    } finally {
-      setLoading(false);
-    }
-  };
-
-  fetchProduct();
-}, [id]);
-
-
-const handleSizeSelect = (size: string) => {
-  setSelectedSize(size); // Update the selected size
-};
-
-const toggleReviews = () => {
-  setShowReviews((prevState) => !prevState);
-};
-
-const handleAddToBag = () => {
-  if (!selectedSize) {
-    alert("Please select a size before adding to the bag.");
-    return;
-  }
-  const cartItem = {
-    ...product,
-    selectedSize,
-    quantity,
-
-    
-  }
-
-
-  const currentCart = JSON.parse(localStorage.getItem("cart") || "[]");
-  localStorage.setItem("cart", JSON.stringify([...currentCart, cartItem])); 
-
-    alert("Product added to bag!");
-    window.location.href = "/addToCart"
-};
-
-  const handleAddToWishlist = () => {
-    if (!product) {
-      console.error("Product not found!");
-      return;
-    }
-  
-    const wishlistItem = {
-      ...product,
-      selectedSize,
-      quantity, 
-    };
-  
-    // Check if the item already exists in the wishlist
-    const currentWishlist = JSON.parse(localStorage.getItem("wishlist") || "[]");
-    const itemExists = currentWishlist.some((item: any) => item._id === wishlistItem._id);
-  
-    if (itemExists) {
-      alert("Item already in wishlist!");
-      return;
-    }
-  
-    // Save item to wishlist
-    localStorage.setItem("wishlist", JSON.stringify([...currentWishlist, wishlistItem]));
-  
-    alert("Product added to wishlist!");
-  };
-  
-
-const increaseQuantity = () => {
-  setQuantity((prev) => prev + 1); 
-};
-   
-const decreaseQuantity = () => {
-  setQuantity((prev) => (prev > 1 ? prev - 1 : 1)); 
-};
-
-
-if (loading) {
-  return <div>Loading product details...</div>;
-}
-
-if (!product) {
-  return <div>Product not found</div>;
-}
-*/}
-
+'use client';
 import React, { useEffect, useState } from "react";
 import { RiArrowDropDownLine, RiArrowDropUpLine } from "react-icons/ri";
 import { client } from '@/sanity/lib/client';
 import Image from 'next/image';
 import MobileNavbar from '@/components/mobileNavbar';
 import ReviewsAndRatings from "../../../components/review";
-
-
 
 interface Product {
   _id: string;
@@ -178,7 +37,6 @@ const ProductDetails = ({ params }: ProductDetailsProps) => {
   const { id } = params;
   const [product, setProduct] = useState<Product | null>(null);
   const [loading, setLoading] = useState<boolean>(true);
-  //const [selectedSize, setSelectedSize] = useState<string | null>(null);
   const [selectedSize, setSelectedSize] = useState<string>("")
   const [quantity, setQuantity] = useState<number>(1);
   const [showReviews, setShowReviews] = useState<boolean>(false);
@@ -230,10 +88,11 @@ const ProductDetails = ({ params }: ProductDetailsProps) => {
 
     // Update localStorage
     const currentCart = JSON.parse(localStorage.getItem("cart") || "[]");
-    localStorage.setItem("cart", JSON.stringify([...currentCart, cartItem]));
+    const updatedCart = [...currentCart, cartItem];
+    localStorage.setItem("cart", JSON.stringify(updatedCart));
 
     alert("Product added to bag!");
-    window.location.href = "/addTocart";
+    window.location.href = "/addtocart";
   };
 
   const handleAddToWishlist = () => {
