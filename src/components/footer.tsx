@@ -7,7 +7,7 @@ import { IoLocation } from "react-icons/io5";
 
 function Footer() {
   return (
-    <div className='lg:w-[1260px] max-w-[1320px] w-full h-auto flex justify-center items-center lg:mt-20 md:mt-[26%] mt-[160%] xs:mt-0 bg-black text-white'>
+    <div className='lg:w-[1260px] max-w-[1320px] w-full h-auto flex justify-center items-center lg:mt-20 md:mt-[26%] mt-[160%] sm:mt-28 xs:mt-[460px] bg-black text-white '>
         <div className=" w-full h-auto grid  grid-cols-1 md:grid-cols-2 mt-16 mr-6 gap-8 ">
         <div className="max-w-[832px] w-full h-[23] grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 lg:gap-44 md:gap-4 gap-y-20 mx-4 sm:mx-10">
           <div className="w-[225px] h-[169px] flex flex-col bg-black ">
@@ -59,14 +59,14 @@ function Footer() {
           </div>
          
           <div className="flex w-full h-auto flex-wrap justify-between items-center border-t border-gray-800 lg:w-[1200px] bg-gray-260 mt-20 md:w-[768px] md:p-2">
-            <div className="flex justify-start gap-4 sm:mx-10 xs:mx-6">
+            <div className="flex justify-start gap-4 sm:mx-10 xs:mx-6 xxs:mx-4">
            <IoLocation className='text-white text-lg mt-6' />
            <p className='text-white text-[16px] mt-6 '>India
            <span className="ml-8 text-[#7E7E7E] text-sm">© 2023 Nike, Inc. All Rights Reserved.</span>
            </p>
             </div>
             <div className="flex flex-wrap justify-end sm:flex-col">
-              <ul className='flex text-[#7E7E7E] text-sm lg:gap-8 gap-8 mt-6 mr-4 md:gap-32 sm:mx-12 xs:mx-6 sm:gap-10'>
+              <ul className='flex text-[#7E7E7E] text-sm lg:gap-8 gap-8 mt-6 mr-4 md:gap-32 sm:mx-12 xs:mx-6 sm:gap-10 xxs:mx-4'>
                <li>Guides</li>
                <li>Terms of Sale</li>
                <li>Terms of Use</li>

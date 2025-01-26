@@ -14,7 +14,7 @@ import Image from "next/image";
 
 function MobileNavbar() {
   return (
-    <div className="md:hidden w-full sm:w-[620px] xs:w-[400px] max-w-[700px] flex justify-between items-center sticky top-0 bg-colors-bgColor h-14 px-8">
+    <div className="md:hidden w-full sm:w-[640px] xs:w-[410px] max-w-[700px] flex justify-between items-center sticky top-0 bg-colors-bgColor h-14 px-8">
       {/* Nike Logo */}
       <div>
         <Image src={nike} alt="Nike Logo" width={38} height={30} />

@@ -22,7 +22,7 @@ const ProductCard = ({ product }: { product: Product }) => {
         alt={product.name || "Product"}
         width={348}
         height={348}
-        className="md:w-[348px] h-[348px] sm:w-[448px] object-cover rounded-t-sm hover:border-[1px] hover:border-gray-600"
+        className="md:w-[348px] h-[348px] sm:w-[448px] xs:w-[448px] object-cover rounded-t-sm hover:border-[1px] hover:border-gray-600"
       />
       {/* Product Details */} 
       <div className="p-4">

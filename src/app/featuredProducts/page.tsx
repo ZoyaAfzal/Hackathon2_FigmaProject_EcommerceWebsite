@@ -1,5 +1,5 @@
 'use client';
-import { IoMdSwitch } from 'react-icons/io';
+//import { IoMdSwitch } from 'react-icons/io';
 import { RiArrowDropUpLine } from 'react-icons/ri';
 import { client } from '@/sanity/lib/client';
 import { urlFor } from '@/sanity/lib/image';
@@ -160,7 +160,7 @@ const FeaturedProducts = () => {
     currentPage * productsPerPage
   );
   return (
-    <div className="lg:w-[1266px] max-w-[1320px] md:w-[940px] h-auto xs:h-[900px] sm:h-auto w-full">
+    <div className="lg:w-[1262px] max-w-[1320px] md:w-[754px] sm:w-[640px] h-auto w-full">
       <div className="md:hidden">
         <MobileNavbar />
       </div>
@@ -168,7 +168,7 @@ const FeaturedProducts = () => {
     
       <div className="w-full lg:w-[1200px] max-w-[1320px] flex flex-col lg:flex-row justify-between items-center px-6 lg:pr-12 mt-16 lg:mt-8">
         <h1 className="text-2xl font-bold">New (500)</h1>
-        <ul className="flex gap-6 mt-4 lg:mt-0 text-[16px] font-medium ml-40 xs:ml-0 lg:ml-20">
+        <ul className="flex mt-4 lg:mt-0 text-[16px] font-medium ml-40 xs:ml-0 ">
           <li>
             <input
               id="search"
@@ -176,21 +176,21 @@ const FeaturedProducts = () => {
               value={searchQuery}
               onChange={handleSearchChange}
               placeholder="Search..."
-              className="border border-gray-300 px-4 py-2 focus:outline-none focus:bg-gray-50 bg-[#f8f7f7] lg:ml-44 xs:ml-0"
+              className="border border-gray-300 px-4 py-2 focus:outline-none focus:bg-gray-50 bg-[#f8f7f7] lg:ml-[40%] sm:ml-[22%] xs:ml-0 xxs:mr-40"
             />
           </li>
         </ul>
-        <ul className="flex gap-6 mt-4 lg:mt-0 text-[16px] font-medium ml-20">
-          <li className="flex items-center ">
-            Hide Filters <IoMdSwitch className="text-center" />
-          </li>
+        <ul className="flex gap-6 mt-4 lg:mt-0 text-[16px] font-medium">
+       {/*   <li className="flex items-center">
+            Hide Filters <IoMdSwitch className="text-cente" />
+          </li> */}
           <li className="flex items-center">
             <label htmlFor="sort"></label>
             <select
               id="sort"
               value={sortOption}
               onChange={handleSortChange}
-              className="border border-gray-300 px-4 py-2 focus:outline-none bg-[#f8f7f7] h-10"
+              className="border border-gray-300 px-4 py-2 focus:outline-none bg-[#f8f7f7] h-10 lg:ml-[34%]"
             >
               <option value="" disabled className="text-gray-300">
                 Sort By:
@@ -225,11 +225,11 @@ const FeaturedProducts = () => {
             { label: 'Shop by Price', options: ['Under ₹ 2,500.00', '₹ 2,501.00 - ₹'], state: selectedPrice, setState: setSelectedPrice },
           ].map(({ label, options, state, setState }, idx) => (
             <div key={idx}>
-              <div className="flex justify-between items-center mt-44 xs:mt-8 border-t md:mx-10 lg:mt-44 lg:w-52 lg:mx-4">
+              <div className="flex justify-between items-center mt-44 xs:mt-8 xxs:mt-8 border-t md:mx-10 lg:mt-44 lg:w-52 lg:mx-4">
                 <h3 className="font-semibold text-lg mb-2 pt-6">{label}</h3>
                 <RiArrowDropUpLine className="text-3xl pt-2" />
               </div>
-              <div className="flex flex-col gap-2 lg:mt-6 xs:mt-0 md:mx-10">
+              <div className="flex flex-col gap-2 lg:mt-6 xs:mt-0 md:mx-10 xxs:mt-2">
                 {options.map((option) => (
                   <label key={option} className="flex items-center gap-2">
                     <input
@@ -253,7 +253,7 @@ const FeaturedProducts = () => {
         ) : error ? (
           <div className="text-center text-red-500 font-bold my-4">{error}</div>
         ) : (
-          <div className="w-full lg:w-[80%] grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 px-4 lg:px-6 md:mt-12 mt-8 lg:mt-0">
+          <div className="w-full lg:w-[80%] grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 px-4 lg:px-6 md:mt-12 mt-8 lg:mt-0 md:ml-4">
             {currentProducts.length > 0 ? (
               currentProducts.map((product) => (
                 <Link key={product._id} href={`/featuredProducts/${product._id}`}>
@@ -271,11 +271,11 @@ const FeaturedProducts = () => {
 
  
       {totalPages > 1 && (
-        <div className="flex justify-center items-center mt-10 space-x-4">
+        <div className="flex justify-center items-center mt-10 space-x-4 xxs:space-x-3">
           <button
             onClick={() => setCurrentPage((prev) => Math.max(prev - 1, 1))}
             disabled={currentPage === 1}
-            className="px-4 py-2 bg-gray-200 rounded disabled:opacity-50"
+            className="px-4 py-2 bg-gray-200 rounded disabled:opacity-50 xxs:hidden sm:flex"
           >
             Previous
           </button>
@@ -293,7 +293,7 @@ const FeaturedProducts = () => {
           <button
             onClick={() => setCurrentPage((prev) => Math.min(prev + 1, totalPages))}
             disabled={currentPage === totalPages}
-            className="px-4 py-2 bg-gray-200 rounded disabled:opacity-50"
+            className="px-4 py-2 bg-gray-200 rounded disabled:opacity-50 xxs:hidden sm:flex"
           >
             Next
           </button>
@@ -301,7 +301,7 @@ const FeaturedProducts = () => {
       )}
 
      
-      <section className="w-full max-w-[1092px] px-4 py-6 border-t mt-16 mx-auto">
+      <section className="w-full max-w-[1092px] xxs:w-[280px] md:w-[780px] md:mt-20 px-4 py-6 border-t mt-16 mx-auto">
         <h2 className="text-2xl font-bold mb-4">Related Categories</h2>
         <div className="flex flex-wrap gap-2 mt-6">
           {[

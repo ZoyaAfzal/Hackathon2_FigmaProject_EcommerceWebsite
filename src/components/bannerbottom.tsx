@@ -32,7 +32,7 @@ function BannerBottom() {
         </div>
 
         {/* Button */}
-        <button className="top-[124%] xs:mt-6 bg-black hover:bg-colors-secondaryColor md:mt-0 lg:top-[124%] w-[140px] h-[40px] md:w-[152px] md:h-[42px] rounded-3xl text-white cursor-pointer">
+        <button className="top-[124%] xs:mt-6 bg-black hover:bg-colors-secondaryColor md:mt-0 lg:top-[124%] w-[140px] h-[40px] md:w-[152px] md:h-[42px] xxs:mt-4 sm:mt-0 rounded-3xl text-white cursor-pointer">
           Find Your Shoe
         </button>
       </div>

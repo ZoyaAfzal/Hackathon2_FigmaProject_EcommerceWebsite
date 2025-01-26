@@ -5,14 +5,14 @@ const nextConfig = {
         domains: ['cdn.sanity.io'],
       },
      
-      webpack(config, { dev, isServer }) {
+  /* webpack(config, { dev, isServer }) {
               if (dev || !isServer) {
-                config.devtool = "source-map";
+                config.devtool = "cheap-module-source-map";
               }
-      
+  
         return config;
-            },
+            }, */
       
-};
+}; 
 
 export default nextConfig;

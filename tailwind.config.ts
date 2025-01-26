@@ -11,6 +11,7 @@ const config: Config = {
   	extend: {
 		screens: {
 			xs: '400px', // Add extra small screens if needed
+			xxs:'320px'
 		  },
   		colors: {
   			background: 'hsl(var(--background))',

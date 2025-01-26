@@ -32,7 +32,7 @@ const [maxWidthClass, setMaxWidthClass] = useState(() =>
   };
 
   return (
-    <div className={`xs:hidden md:flex ${maxWidthClass} md:w-[780px] w-full h-16 justify-between items-center border-b-[1px] border-gray-200 pl-14 cursor-pointer md:pl-10`}>
+    <div className={`xxs:hidden md:flex ${maxWidthClass} md:w-[780px] w-full h-16 justify-between items-center border-b-[1px] border-gray-200 pl-14 cursor-pointer md:pl-10`}>
       <Image src={nike} alt="nikelogo2" width={59} height={20}  priority />
       {/* Categories */}
       <ul className="flex gap-10 lg:mr-0 lg:ml-36 font-semibold text-[#111111] md:gap-4 md:mr-[2%]">

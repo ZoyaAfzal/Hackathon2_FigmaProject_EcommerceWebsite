@@ -62,26 +62,26 @@ interface ArrowProps {
 
 return (
 
-    <div className='lg:w-[1266px]'>
+    <div className='lg:w-[1262px]'>
          <Slider {...settings}>
         <div>
         <Image src={nikebanner} alt="nikebanners" width={1060} height={700} loading="eager"
-        className='slider-image object-cover lg:w-[1266px] lg:h-[900px] md:w-[968px] sm:w-[720px] '
+        className='slider-image object-cover lg:w-[1262px] lg:h-[900px] md:w-[968px] sm:w-[720px] '
         />
         </div>
         <div>
         <Image src={Nikeban} alt="nikebanners"  width={1060} height={700} loading="lazy"
-        className='slider-image  object-cover lg:w-[1266px] lg:h-[900px] md:w-[968px] sm:w-[720px] '
+        className='slider-image  object-cover lg:w-[1262px] lg:h-[900px] md:w-[968px] sm:w-[720px] '
         />
         </div>
         <div>
         <Image src={bannernike2} alt="nikebanners" width={1060} height={500} loading="lazy" 
-        className='slider-image  object-cover lg:w-[1266px] md:w-[968px] sm:w-[720px] ]'
+        className='slider-image  object-cover lg:w-[1262px] md:w-[968px] sm:w-[720px] ]'
         />
         </div>
         <div>
         <Image src={bannernike3} alt="nikebanners"  width={1200} height={500} loading="lazy"
-        className='slider-image  object-cover lg:w-[1266px] md:w-[968px] sm:w-[720px] '
+        className='slider-image  object-cover lg:w-[1262px] md:w-[968px] sm:w-[720px] '
         />
         </div>
         </Slider>
