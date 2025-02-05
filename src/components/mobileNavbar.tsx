@@ -1,10 +1,11 @@
 import React from "react";
 import { GiHamburgerMenu } from "react-icons/gi";
 import nike from "../../public/images/nike.png";
+import { FaRegHeart } from "react-icons/fa";
+import { IoBagOutline } from "react-icons/io5";
 import {
   Sheet,
   SheetContent,
-  SheetDescription,
   SheetHeader,
   SheetTitle,
   SheetTrigger,
@@ -12,49 +13,104 @@ import {
 import Link from "next/link";
 import Image from "next/image";
 
+
 function MobileNavbar() {
   return (
-    <div className="md:hidden w-full sm:w-[640px] xs:w-[410px] max-w-[700px] flex justify-between items-center sticky top-0 bg-colors-bgColor h-14 px-8">
-      {/* Nike Logo */}
-      <div>
-        <Image src={nike} alt="Nike Logo" width={38} height={30} />
-      </div>
+    <nav className="w-full bg-colors-bgColor border-b sticky top-0 z-50">
+      {/* Mobile Navigation */}
+      <div className="md:hidden flex justify-between items-center px-4 h-14">
+        <Link href="/">
+          <Image 
+            src={nike} 
+            alt="Nike Logo" 
+            width={38} 
+            height={30} 
+            className="w-9 h-7"
+          />
+        </Link>
 
-      {/* Hamburger Menu */}
-      <Sheet>
-        <SheetTrigger>
-          <GiHamburgerMenu className="text-3xl hover:text-colors-secondaryColor" />
-        </SheetTrigger>
-        <SheetContent side="right">
-          <SheetHeader>
-            <SheetTitle>Menu</SheetTitle>
-            <SheetDescription>
-              <ul className="flex flex-col gap-4 text-[#111111] justify-start items-start">
-                <li className="hover:text-colors-secondaryColor">
-                  <Link href="/news&featured">News & Featured</Link>
-                </li>
-                <li className="hover:text-colors-secondaryColor">
-                  <Link href="/men">Men</Link>
-                </li>
-                <li className="hover:text-colors-secondaryColor">
-                  <Link href="/women">Women</Link>
-                </li>
-                <li className="hover:text-colors-secondaryColor">
-                  <Link href="/kids">Kids</Link>
-                </li>
-                <li className="hover:text-colors-secondaryColor">
-                  <Link href="/sale">Sale</Link>
-                </li>
-                <li className="hover:text-colors-secondaryColor">
-                  <Link href="/snrks">SNRKS</Link>
-                </li>
-              </ul>
-            </SheetDescription>
-          </SheetHeader>
-        </SheetContent>
-      </Sheet>
-    </div>
+        <div className="flex items-center gap-4">
+          <Link href="/addtocart" className="relative">
+            <IoBagOutline className="w-6 h-6" />
+            <span className="absolute -top-1 -right-2 bg-red-500 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center">
+              3
+            </span>
+          </Link>
+          
+          <Sheet>
+            <SheetTrigger>
+              <GiHamburgerMenu className="text-2xl hover:text-colors-secondaryColor" />
+            </SheetTrigger>
+            <SheetContent side="right" className="w-[300px] sm:w-[400px]">
+              <SheetHeader className="border-b pb-4">
+                <SheetTitle>Nike Menu</SheetTitle>
+              </SheetHeader>
+              
+              <nav className="mt-6">
+                <ul className="flex flex-col gap-4 text-[#111111]">
+                  <li>
+                    <Link 
+                      href="/news&featured" 
+                      className="flex items-center py-2 hover:text-colors-secondaryColor transition-colors"
+                    >
+                      New & Featured
+                    </Link>
+                  </li>
+                  <li>
+                    <Link 
+                      href="/men" 
+                      className="flex items-center py-2 hover:text-colors-secondaryColor transition-colors"
+                    >
+                      Men
+                    </Link>
+                  </li>
+                  <li>
+                    <Link 
+                      href="/women" 
+                      className="flex items-center py-2 hover:text-colors-secondaryColor transition-colors"
+                    >
+                      Women
+                    </Link>
+                  </li>
+                  <li>
+                    <Link 
+                      href="/kids" 
+                      className="flex items-center py-2 hover:text-colors-secondaryColor transition-colors"
+                    >
+                      Kids
+                    </Link>
+                  </li>
+                  <li>
+                    <Link 
+                      href="/sale" 
+                      className="flex items-center py-2 hover:text-colors-secondaryColor transition-colors"
+                    >
+                      Sale
+                    </Link>
+                  </li>
+                  <li>
+                    <Link 
+                      href="/snkrs" 
+                      className="flex items-center py-2 hover:text-colors-secondaryColor transition-colors"
+                    >
+                      SNKRS
+                    </Link>
+                  </li>
+                  <li className="border-t mt-4 pt-4">
+                    <Link 
+                      href="/addTowishlist" 
+                      className="flex items-center py-2 hover:text-colors-secondaryColor transition-colors"
+                    >
+                      <FaRegHeart className="mr-2" /> Wishlist
+                    </Link>
+                  </li>
+                </ul>
+              </nav>
+            </SheetContent>
+          </Sheet>
+        </div>
+      </div>
+    </nav>
   );
 }
-
-export default MobileNavbar;
+export default MobileNavbar; 

@@ -5,6 +5,7 @@ import { client } from '@/sanity/lib/client';
 import Image from 'next/image';
 import MobileNavbar from '@/components/mobileNavbar';
 import ReviewsAndRatings from "../../../components/review";
+import toast, { Toaster } from "react-hot-toast";
 
 interface Product {
   _id: string;
@@ -71,7 +72,7 @@ const ProductDetails = ({ params }: ProductDetailsProps) => {
 
   const handleAddToBag = () => {
     if (!selectedSize) {
-      alert("Please select a size before adding to the bag.");
+      toast.error("Please select a size before adding to the bag.");
       return;
     }
 
@@ -91,8 +92,9 @@ const ProductDetails = ({ params }: ProductDetailsProps) => {
     const updatedCart = [...currentCart, cartItem];
     localStorage.setItem("cart", JSON.stringify(updatedCart));
 
-    alert("Product added to bag!");
+    toast.success(`${product.name} is added to bag!`);
     window.location.href = "/addtocart";
+
   };
 
   const handleAddToWishlist = () => {
@@ -112,12 +114,12 @@ const ProductDetails = ({ params }: ProductDetailsProps) => {
     const itemExists = currentWishlist.some((item: CartItem) => item._id === wishlistItem._id);
 
     if (itemExists) {
-      alert("Item already in wishlist!");
+      toast.error("Item already in wishlist!");
       return;
     }
 
     localStorage.setItem("wishlist", JSON.stringify([...currentWishlist, wishlistItem]));
-    alert("Product added to wishlist!");
+    toast.success(`${product.name} is added to wishlist!`);
   };
 
   const increaseQuantity = () => {
@@ -137,15 +139,15 @@ const ProductDetails = ({ params }: ProductDetailsProps) => {
   }
 
   return (
-    <div className="lg:w-[1344px] max-w-[1800px] xs:w-[430px] sm:w-[600px] w-full h-auto sm:h-[1400px] md:px-8">
+    <div className="lg:w-[1262px] max-w-[1344px] xs:w-[430px] xxs:w-[340px] sm:w-[600px] md:h-[2100px] w-full h-auto sm:h-[2240px] xs:h-[1480px] xxs:h-[140px] md:px-8">
       <div className="md:hidden">
         <MobileNavbar />
       </div>
       <div className="w-full h-auto md:h-[1880px] lg:h-[1400px] sm:h-[1050px] xs:h-[1230px] px-6 lg:pr-12 mt-2 xs:w-[400px] sm:w-[600px]">
         <h2 className="flex font-semibold text-lg font-sans text-center md:text-left mt-4">Member Access</h2>
         <div className="max-w-[1200px] w-full h-[580px] grid grid-cols-1 lg:grid-cols-2 xs:w-[400px] sm:w-[700px]">
-          <div className="w-[700px] h-auto grid grid-cols-2 sm:mt-4 lg:mt-0 xs:w-[350px] sm:w-[700px]">
-            <div className="md:space-y-4 flex-col">
+          <div className="w-[700px] h-auto grid grid-cols-2  sm:mt-4 lg:mt-0 xs:w-[350px] xxs:w-[270px] sm:w-[700px]">
+            <div className="md:space-y-4 xxs:space-y-0 flex-col">
               <div className="gap-4 flex">
                 <Image
                   src={product.imageUrl}
@@ -187,11 +189,11 @@ const ProductDetails = ({ params }: ProductDetailsProps) => {
               <p className="text-[16px] font-semibold mt-4">MRP: ₹{product.price.toFixed(2)}</p>
               <p className="text-sm text-[#757575]">incl. of taxes</p>
               <p className="text-sm text-[#757575]">(Also includes all applicable duties)</p>
-              <div className="flex justify-between items-end mt-2 px-2 xs:w-[340px] lg:w-[356px] sm:mt-4">
+              <div className="flex justify-between items-end mt-2 px-2 xs:w-[340px] xxs:w-[270px] lg:w-[356px] sm:mt-4 xxs:mt-4">
                 <label className="block text-[16px] font-semibold">Select Size:</label>
                 <label className="block text-sm font-medium">Select Guide</label>
               </div>
-              <div className="mt-1 lg:w-[356px] xs:w-[340px] h-auto p-2">
+              <div className="mt-1 lg:w-[356px] xs:w-[340px] xxs:w-[270px] h-auto p-2">
                 <div className="grid grid-cols-2 md:grid-cols-3 gap-2">
                   {product.sizes && product.sizes.length > 0 ? (
                     product.sizes.map((size) => (
@@ -211,7 +213,7 @@ const ProductDetails = ({ params }: ProductDetailsProps) => {
                     <p>No sizes available</p>
                   )}
                 </div>
-                <div className="mt-8 flex items-center gap-3 font-semibold text-[16px]">
+                <div className="mt-8 flex items-center gap-3 font-semibold text-[16px] xxs:ml-8">
                   Quantity:
                   <button
                     onClick={decreaseQuantity}
@@ -229,21 +231,21 @@ const ProductDetails = ({ params }: ProductDetailsProps) => {
                 </div>
                 <button
                   onClick={handleAddToBag}
-                  className="w-[336px] h-14 rounded-3xl bg-black text-[16px] text-white font-semibold font-sans mt-10 hover:bg-gray-300"
+                  className="lg:w-[336px] xxs:w-[220px] xxs:ml-6 h-14 rounded-3xl bg-black text-[16px] text-white font-semibold font-sans mt-10 hover:bg-gray-300"
                 >
                   Add to Bag ({quantity})
                 </button>
                 <button
                   onClick={handleAddToWishlist}
-                  className="w-[336px] h-14 rounded-3xl bg-black text-lg text-white font-semibold font-sans mt-2 hover:bg-gray-300"
+                  className="lg:w-[336px] xxs:w-[220px] xxs:ml-6 h-14 rounded-3xl bg-black text-lg text-white font-semibold font-sans mt-2 hover:bg-gray-300"
                 >
                   Favourite
                 </button>
               </div>
-              <p className="text-gray-900 mt-10 sm:text-left md:mr-0 lg:mr-28 sm:mr-0 sm:ml-0 lg:w-[356px]">
+              <p className="text-gray-900 mt-10 sm:text-left md:mr-0 lg:mr-28 sm:mr-0 sm:ml-0 lg:w-[356px] xxs:w-[280px] xxs:text-center">
                 {product.description}
               </p>
-              <div className="mt-10 ml-8 xs:ml-14 text-sm font-medium text-gray-900 gap-2 text-center md:text-left md:mr-0 mr-28">
+              <div className="mt-10 ml-8 xs:ml-14 text-sm font-medium text-gray-900 gap-2 text-center md:text-left md:mr-0 mr-28 xxs:mr-10 xxs:w-[220px]">
                 <p className="text-gray-900">Color Shown: {product.color}</p>
                 <p className="text-gray-900">{product.details}</p>
                 <p className="text-gray-900">{product.style}</p>
@@ -292,6 +294,12 @@ const ProductDetails = ({ params }: ProductDetailsProps) => {
           </div>
         </div>
       </div>
+      <Toaster position="bottom-right" toastOptions={{
+          style: {
+            background:"#000",
+            color: "#fff"
+          }
+        }}/>
     </div>
   );
 };

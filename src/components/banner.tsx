@@ -25,7 +25,7 @@ interface ArrowProps {
           className="w-10 h-10 absolute bottom-32 z-30 right-10 border-[1px] border-gray-700 px-2 hover:border-gray-800 bg-colors-bgColor hover:bg-colors-primaryColor overflow-hidden"
           onClick={onClick}
         > 
-          <div className="w-full max-w-[1320px] lg:w-[1262px] h-auto text-gray-600 hover:text-white text-sm uppercase flex relative items-center justify-between cursor-pointer group pt-3">
+          <div className="w-full max-w-[1344px] lg:w-[1262px] h-auto text-gray-600 hover:text-white text-sm uppercase flex relative items-center justify-between cursor-pointer group pt-3">
             <span className="text-lg ">
               <FaChevronRight />
             </span>
@@ -66,22 +66,22 @@ return (
          <Slider {...settings}>
         <div>
         <Image src={nikebanner} alt="nikebanners" width={1060} height={700} loading="eager"
-        className='slider-image object-cover lg:w-[1262px] lg:h-[900px] md:w-[968px] sm:w-[720px] '
+        className='slider-image object-cover lg:w-[1262px] lg:h-[830px] md:w-[968px] sm:w-[720px] '
         />
         </div>
         <div>
         <Image src={Nikeban} alt="nikebanners"  width={1060} height={700} loading="lazy"
-        className='slider-image  object-cover lg:w-[1262px] lg:h-[900px] md:w-[968px] sm:w-[720px] '
+        className='slider-image  object-cover lg:w-[1262px] lg:h-[830px] md:w-[968px] sm:w-[720px] '
         />
         </div>
         <div>
         <Image src={bannernike2} alt="nikebanners" width={1060} height={500} loading="lazy" 
-        className='slider-image  object-cover lg:w-[1262px] md:w-[968px] sm:w-[720px] ]'
+        className='slider-image  object-cover lg:w-[1262px] md:w-[868px] sm:w-[720px] ]'
         />
         </div>
         <div>
         <Image src={bannernike3} alt="nikebanners"  width={1200} height={500} loading="lazy"
-        className='slider-image  object-cover lg:w-[1262px] md:w-[968px] sm:w-[720px] '
+        className='slider-image  object-cover lg:w-[1262px] md:w-[868px] sm:w-[720px] '
         />
         </div>
         </Slider>

@@ -176,7 +176,7 @@ const NewsAndFeatured = () => {
               value={searchQuery}
               onChange={handleSearchChange}
               placeholder="Search..."
-              className="border border-gray-300 px-4 py-2 focus:outline-none focus:bg-gray-50 bg-[#f8f7f7] lg:ml-[40%] sm:ml-[22%] xs:ml-0 xxs:mr-40"
+              className="border border-gray-300 px-4 py-2 focus:outline-none focus:bg-gray-50 bg-[#f8f7f7] lg:ml-[40%] sm:ml-[22%] xs:mr-0 xxs:mr-40"
             />
           </li>
         </ul>
@@ -263,6 +263,7 @@ const NewsAndFeatured = () => {
             ) : (
               <div className="col-span-full text-center text-gray-500">
                 No products available. Please try again later.
+                
               </div>
             )}
           </div>

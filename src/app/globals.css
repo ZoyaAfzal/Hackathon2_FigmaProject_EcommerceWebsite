@@ -29,6 +29,24 @@ html, body {
   margin: 0 auto;
   padding: 0 15px;
 }
+.scroll-container {
+  display:flex;
+  overflow-x: scroll; 
+  scroll-behavior: smooth;
+  white-space: nowrap; 
+  -ms-overflow-style: none; 
+  scrollbar-width: none;
+}
+
+/* Hide scrollbar for Chrome, Safari, Edge */
+.scroll-container::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for Firefox */
+.scroll-container {
+  scrollbar-width: none;
+}
 
 @media (min-width: 1390px) {
   .container {

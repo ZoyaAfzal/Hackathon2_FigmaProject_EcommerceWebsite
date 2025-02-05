@@ -1,8 +1,10 @@
+'use client';
 import Image from "next/image";
-import React from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { FaAngleRight } from "react-icons/fa6";
 import { FaChevronLeft } from "react-icons/fa";
 import { createClient } from '@sanity/client';
+import Link from "next/link";
 
 
 
@@ -36,7 +38,14 @@ interface Category {
 
 
 
-async function NikeAir () {
+function NikeAir () {
+  const [categories, setCategory] = useState<Category[]>([]);
+  const scrollRef = useRef<HTMLDivElement>(null);
+ 
+ 
+  useEffect(() => {
+  const fetchCategories = async () => {
+    try {
   const query = `*[_type == "category"] {
     _id,
     name,
@@ -53,7 +62,28 @@ async function NikeAir () {
     style,
     tag,
   }`;
-    const categories: Category[] = await client.fetch(query);
+    const data: Category[] = await client.fetch(query);
+    setCategory(data);
+      } catch (error) {
+        console.error("Error fetching categories:", error);
+      }
+    };
+
+    fetchCategories();
+  }, []);
+    const scrollAmount = 300;
+
+    const scrollLeft = () => {
+      if (scrollRef.current) {
+        scrollRef.current.scrollLeft -= scrollAmount;
+      }
+    };
+  
+    const scrollRight = () => {
+      if (scrollRef.current) {
+        scrollRef.current.scrollLeft += scrollAmount;
+      }
+    };
   return (
     <div className="lg:w-[1262px] max-w-[1320px] w-full flex flex-col items-center justify-center mt-10 lg:mt-18 md:mt-0 px-4 sm:px-8 ">
       {/* Header Section */}
@@ -88,34 +118,39 @@ async function NikeAir () {
           </h1>
           <div className="flex items-center gap-2">
             <p className="font-semibold hover:text-colors-secondaryColor">Shop</p>
-            <FaAngleRight className="text-gray-600 w-8 h-8 p-2 bg-gray-100 hover:bg-gray-300 rounded-full" />
-            <FaChevronLeft className="text-gray-600 w-8 h-8 p-2 bg-gray-100 hover:bg-gray-300 rounded-full" />
+            <button className="flex">
+            <FaChevronLeft onClick={scrollLeft} className="text-gray-600 w-8 h-8 p-2 bg-gray-100 hover:bg-gray-300 rounded-full" />
+            </button>
+            <button className="flex">
+            <FaAngleRight  onClick={scrollRight} className="text-gray-600 w-8 h-8 p-2 bg-gray-100 hover:bg-gray-300 rounded-full font-semibold" />
+            </button>
           </div>
         </div>
 
 
       {/* Categories Section */} 
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 xs:mt-2"> 
+      <div  ref={scrollRef} className="scroll-container overflow-x-scroll grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 xs:mt-2 lg:space-x-4 "> 
           {categories.map((category) => ( 
-            <div key={category._id} className="bg-gray-100 p-4 rounded-lg shadow-md hover:shadow-lg">
-              <div className="flex flex-col items-center sm:mt-2">
+                <Link key={category._id} href={`/nikeAir/${category._id}`}>
+            <div key={category._id} className="bg-gray-100 p-4 rounded-lg shadow-md hover:shadow-xl w-[350px] border border-gray-200 transition">
+              <div className="flex flex-col items-center sm:mt-2 border border-gray-200 hover:border-gray-500 rounded-lg hover:shadow-lg transition">
                 <Image
                   src={category.image}
                   alt={category.name}
-                  width={400}
+                  width={480}
                   height={480}
                   className="w-full h-64 object-cover rounded-sm"
                 />
                   <div className="bottom-0 w-full bg-white/25 p-2">
-                  <div className="flex justify-between items-center">
+                  <div className="flex justify-between items-center gap-4">
                 <h3 className="text-lg font-semibold text-[#111111] mt-4">{category.name}</h3>
-                <span className="font-semibold text-sm hover:text-colors-secondaryColor">MRP: {" "}₹{category.price}.00</span>
+                <span className="font-semibold text-sm hover:text-colors-secondaryColor mt-4">MRP: {" "}₹{category.price}.00</span>
                 </div>
                 <span className="text-gray-600 text-sm">{category.category}</span>
               </div>
             </div>
         </div>
-        
+        </Link>
       ))}
       </div>
       
