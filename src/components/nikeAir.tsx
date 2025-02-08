@@ -85,7 +85,7 @@ function NikeAir () {
       }
     };
   return (
-    <div className="lg:w-[1262px] max-w-[1320px] w-full flex flex-col items-center justify-center mt-10 lg:mt-18 md:mt-0 px-4 sm:px-8 ">
+    <div className="lg:max-w-[1262px] max-w-[1800px] xl:max-w-[1800px] w-full flex flex-col items-center justify-center mt-10 lg:mt-18 md:mt-0 px-4 sm:px-8 ">
       {/* Header Section */}
       <div className="text-center">
         <h3 className="text-base sm:text-lg font-semibold text-[#111111] hover:text-colors-secondaryColor">

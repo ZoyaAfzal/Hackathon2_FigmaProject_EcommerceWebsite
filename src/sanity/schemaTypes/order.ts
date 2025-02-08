@@ -63,6 +63,14 @@ export default defineType({
         title: "Order ID",
         type: "string",
       },
+      {
+        name: "productImage",
+        type: "image",
+        title: "Product Image",
+        options: {
+          hotspot: true,
+        }
+      },
     {
         name: "createdAt",
         title: "Created At",
@@ -72,6 +80,7 @@ export default defineType({
           timeFormat: "HH:mm",
           calendarTodayLabel: "Today",
         },
-    }
+    },
   ],
+  
 });

@@ -79,17 +79,17 @@ function Products() {
     };
 
   return (
-    <div className="lg:w-[1174px] max-w-[1320px] md:w-[700px] sm:w-[600px] xs:w-[360px] xxs:w-[260px] w-full h-auto xs:mt-[20%] px-4 md:mt-[14%] sm:mt-[18%] mt-[20%] sm:h-[700px] lg:mt-28 ml-8">
+    <div className="lg:max-w-[1200px] max-w-[1460px] xl:w-[1460px] md:w-[700px] sm:w-[600px] xs:w-[360px] xxs:w-[260px] w-full h-auto xs:mt-[20%] px-4 md:mt-[14%] sm:mt-[18%] mt-[20%] sm:h-[700px] lg:mt-28 ml-8">
       {/* Header Section */}
-      <div className="flex flex-col lg:flex-row justify-between items-center lg:items-start">
+      <div className="flex flex-col md:flex-row lg:flex-row  justify-between items-center lg:items-start">
         <h3 className="text-3xl md:text-4xl font-semibold font-sans hover:text-colors-secondaryColor">
           Gear Up
         </h3>
         </div>
 
-  <div className="flex flex-col lg:flex-row gap-6 mt-6">
+  <div className="flex flex-col lg:flex-row  gap-6 mt-6 w-full">
   {/* Men's Section */}
-  <div className="w-full lg:w-1/2">
+  <div className="w-full lg:w-1/2 xl:w-1/2">
     <div className="flex justify-between items-center mb-4">
       <p className="font-semibold text-lg">Shop Men&apos;s</p>
       <div className="flex gap-3">
@@ -124,7 +124,7 @@ function Products() {
   </div>
 
   {/* Women's Section */}
-  <div className="w-full lg:w-1/2">
+  <div className="w-full lg:w-1/2 xl:w-1/2">
     <div className="flex justify-between items-center mb-4">
       <p className="font-semibold text-lg">Shop Women&apos;s</p>
       <div className="flex gap-3">
@@ -143,7 +143,7 @@ function Products() {
       {womenProducts.length > 0 ? (
         womenProducts.map((product) => (
           <Link key={product._id} href={`/products/${product._id}`}>
-          <div key={product._id} className="w-[300px] h-[400px] flex-shrink-0 bg-white rounded-lg shadow-md p-2 border border-gray-200 hover:border-gray-400 hover:shadow-2xl transition">
+          <div key={product._id} className="min-w-[300px] h-[400px] flex-shrink-0 bg-white rounded-lg shadow-md p-2 border border-gray-200 hover:border-gray-400 hover:shadow-2xl transition">
             <Image src={product.imageUrl} alt={product.name} width={300} height={400} className="rounded-lg" />
             <p className="text-sm font-semibold mt-1">{product.name}</p>
             <p className="text-sm font-semibold mt-1">{product.style}</p>

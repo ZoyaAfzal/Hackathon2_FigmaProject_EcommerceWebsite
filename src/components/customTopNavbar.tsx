@@ -16,7 +16,7 @@ function CustomTopNavbar() {
         <li><Link href="/signin">Join/Log in</Link></li>
         <li><Link href="/help">Help</Link></li>
         <li><Link href="/addtocart"><FaShoppingCart className='text-lg'/></Link></li>
-        <li className='flex text-sm text-[#757575]'><Link href="/"><span className='flex'><IoLocation className=' mr-1 text-lg'/>Pakistan</span></Link></li>
+        <li className='flex text-sm text-[#757575]'><Link href="/"><span className='flex'><IoLocation className=' mr-1 text-lg'/>India</span></Link></li>
       </ul> 
         </div>
     </nav>

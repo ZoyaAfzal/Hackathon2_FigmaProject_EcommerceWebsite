@@ -25,7 +25,7 @@ interface ArrowProps {
           className="w-10 h-10 absolute bottom-32 z-30 right-10 border-[1px] border-gray-700 px-2 hover:border-gray-800 bg-colors-bgColor hover:bg-colors-primaryColor overflow-hidden"
           onClick={onClick}
         > 
-          <div className="w-full max-w-[1344px] lg:w-[1262px] h-auto text-gray-600 hover:text-white text-sm uppercase flex relative items-center justify-between cursor-pointer group pt-3">
+          <div className="w-full max-w-[1800px] lg:max-w-[1262px] xl:max-w-[1800px] h-auto text-gray-600 hover:text-white text-sm uppercase flex relative items-center justify-between cursor-pointer group pt-3">
             <span className="text-lg ">
               <FaChevronRight />
             </span>
@@ -62,11 +62,11 @@ interface ArrowProps {
 
 return (
 
-    <div className='lg:w-[1262px]'>
+    <div className='w-full'> 
          <Slider {...settings}>
         <div>
         <Image src={nikebanner} alt="nikebanners" width={1060} height={700} loading="eager"
-        className='slider-image object-cover lg:w-[1262px] lg:h-[830px] md:w-[968px] sm:w-[720px] '
+        className='slider-image object-cover lg:w-[1262px] xl:w-[1800px]  lg:h-[830px] md:w-[968px] sm:w-[720px] '
         />
         </div>
         <div>

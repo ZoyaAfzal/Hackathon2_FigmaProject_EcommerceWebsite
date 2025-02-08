@@ -7,7 +7,7 @@ import { IoLocation } from "react-icons/io5";
 
 function Footer() {
   return (
-    <div className='lg:w-[1260px] max-w-[1320px] w-full h-auto flex justify-center items-center lg:mt-20 md:mt-[26%] mt-[160%] sm:mt-28 xs:mt-[460px] bg-black text-white '>
+    <div className='lg:max-w-[1260px] max-w-[1800px] xl:max-w-[1800px] w-full h-auto flex justify-center items-center lg:mt-20 md:mt-[26%] mt-[160%] sm:mt-28 xs:mt-[460px] bg-black text-white '>
         <div className=" w-full h-auto grid  grid-cols-1 md:grid-cols-2 mt-16 mr-6 gap-8 ">
         <div className="max-w-[832px] w-full h-[23] grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 lg:gap-44 md:gap-4 gap-y-20 mx-4 sm:mx-10">
           <div className="w-[225px] h-[169px] flex flex-col bg-black ">

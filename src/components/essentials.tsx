@@ -8,13 +8,13 @@ import essential3 from "../../public/images/essential3.png";
 
 function Essentials() {
   return (
-    <div className="lg:w-[1254px] max-w-[1320px] w-full xs:h-[1950px] lg:h-[1420px] xxs:w-[360px] xs:w-[400px] sm:w-[680px] md:w-[780px] xs:mt-12 h-auto flex flex-col items-center justify-center px-4 md:mt-[300px] lg:mt-2 sm:mt-[120%] xxs:mt-10">
+    <div className="lg:max-w-[1254px] max-w-[1800px] xl:w-[1560px] w-full xs:h-[1950px] lg:h-[1420px] xxs:w-[360px] xs:w-[400px] sm:w-[680px] md:w-[780px] xs:mt-12 h-auto flex flex-col items-center justify-center px-4 md:mt-[300px] lg:mt-2 sm:mt-[120%] xxs:mt-10 ">
       {/* Section Heading */}
       <h3 className="text-black flex text-xl md:text-3xl font-semibold font-sans self-start mb-4 md:mr-[62%] lg:ml-12 hover:text-colors-secondaryColor sm:ml-4 ">
         Don&apos;t Miss
       </h3>
 
-      <div className="w-auto h-auto flex flex-col items-center mt-4 lg:ml-12 sm:ml-4 xs:ml-6 xxs:mr-10">
+      <div className="w-auto h-auto flex flex-col items-center mt-4 sm:ml-4 xs:ml-6 xxs:mr-10 lg:ml-12 xl:ml-20">
         {/* Image */}
         <div>
           <Image
@@ -23,6 +23,7 @@ function Essentials() {
             width={1280}
             height={700}
             priority
+            className='xl:w-[3000px]'
           />
         </div>
 
@@ -42,8 +43,8 @@ function Essentials() {
         </button>
       </div>
     
-<div className="lg:w-[1220px] max-w-[1320px] md:w-[710px] sm:w-[560px] xs:w-[400px] xxs:w-[300px] relative w-full h-auto grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-6 md:gap-4 xxs:gap-0 mx-auto mt-20 px-4 sm:mr-16 xxs:mr-8">
-  <h3 className="text-black absolute text-xl sm:text-2xl md:text-3xl font-bold font-sans top-0 left-4 sm:left-6 mb-4 hover:text-colors-secondaryColor">
+<div className="lg:w-[1220px] xl:max-w-[1800px] max-w-[1800px] md:w-[710px] sm:w-[560px] xs:w-[400px] xxs:w-[300px] relative w-full h-auto grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-6 md:gap-4 xxs:gap-0 mx-auto mt-20 px-4 sm:mr-16 xxs:mr-8 xl:ml-28">
+  <h3 className="text-black absolute text-xl sm:text-2xl md:text-3xl font-bold font-sans top-0 left-4 sm:left-6 mb-4 hover:text-colors-secondaryColor ">
     The Essentials
   </h3>
   

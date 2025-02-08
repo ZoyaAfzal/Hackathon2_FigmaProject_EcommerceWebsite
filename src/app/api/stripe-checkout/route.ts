@@ -12,6 +12,7 @@ type Item = {
   image:string
 };
 
+
 export async function POST(req: NextRequest) {
   try {
     console.log("✅ Stripe Checkout API called...");
@@ -22,6 +23,7 @@ export async function POST(req: NextRequest) {
   console.log("📦 Received Items:", items);
   console.log("👤 Customer Info:", { customerEmail, customerName, customerAddress });
 
+  
 
 
     // 🔹 Create Stripe Checkout Session
@@ -40,14 +42,15 @@ export async function POST(req: NextRequest) {
       })),
       customer_email: customerEmail, // Add customer email
       shipping_address_collection: {
-        allowed_countries: ['IN', 'US', 'CA'], // Restrict to India, US, and Canada
+        allowed_countries: ['IN', 'US', 'CA', 'PK'], // Restrict to India, US, and Canada
       },
       metadata: {
         customerName,
         customerEmail,
       },
+      
      
-     // billing_address_collection: 'required', // Collect billing address
+    
   
       mode: "payment",
      success_url: `${process.env.NEXT_PUBLIC_SITE_URL}/success?session_id={CHECKOUT_SESSION_ID}`,
@@ -70,3 +73,4 @@ export async function POST(req: NextRequest) {
   }
 } 
 
+export const runtime = "nodejs";

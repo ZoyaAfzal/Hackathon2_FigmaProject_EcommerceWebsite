@@ -7,7 +7,8 @@ const nextConfig = {
         protocol: "https",
         hostname: "cdn.sanity.io",
        }]
-      },     
+      },  
+    
 }; 
 
 export default nextConfig;
